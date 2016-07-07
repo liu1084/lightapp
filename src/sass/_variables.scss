@@ -1,0 +1,33 @@
+//font
+$font-family-base: "Microsoft YaHei", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+
+//1px = .0625em, 16px = 1em
+$onePx: .0625rem;
+
+//breakpoint
+$breakpoint-sm: 554 * $onePx;
+$breakpoint-md: 768 * $onePx;
+$breakpoint-lg: 992 * $onePx;
+$breakpoint-xl: 1200 * $onePx;
+
+//list
+$list-height: 6.25rem;
+$list-padding-left: .625rem;
+$list-padding-right: $list-padding-left;
+$list-padding-top: $list-padding-left;
+$list-padding-bottom: $list-padding-left;
+//susy
+$susy: (
+        flow: ltr, // ltr | rtl
+        output: float, // float | isolate
+        math: fluid, // fluid | static (requires column-width)
+        column-width: false, // false | value
+        container: 100%, // length or % | auto
+        container-position: center, // left | center | right | <length> [*2] (grid padding)
+        last-flow: to,
+        columns: 12,
+        gutters: .25,
+        gutter-position: after, // before | after | split | inside | inside-static (requires column-width)
+        global-box-sizing: content-box, // content-box | border-box (affects inside/inside-static)
+);

@@ -1,0 +1,143 @@
+@import "susy";
+@import "breakpoint";
+
+$susy: (
+        flow: ltr, // ltr | rtl
+        output: float, // float | isolate
+        math: fluid, // fluid | static (requires column-width)
+        column-width: false, // false | value
+        container: 100%, // length or % | auto
+        container-position: center, // left | center | right | <length> [*2] (grid padding)
+        last-flow: to,
+        columns: 12,
+        gutters: .25,
+        gutter-position: after, // before | after | split | inside | inside-static (requires column-width)
+        global-box-sizing: content-box, // content-box | border-box (affects inside/inside-static)
+);
+
+//$grid-breakpoints: (
+//  // Small screen / phone
+//        sm: 544px,
+//  // Medium screen / tablet
+//        md: 768px,
+//  // Large screen / desktop
+//        lg: 992px,
+//  // Extra large screen / wide desktop
+//        xl: 1200px
+//) !default;
+
+$breakpoint-sm: 554px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+//@each $size, $breakpoint in $grid-breakpoints {
+//  @include breakpoint($breakpoint) {
+//  };
+//}
+
+header {
+  height: 10rem;
+  background: #2F94B2;
+  margin-bottom: 1em;
+}
+
+body {
+  font-family: "Microsoft YaHei", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.hero {
+  height: 10rem;
+  margin-bottom: 1em;
+  h3, h2 {
+    margin: 1em;
+  }
+  .one {
+    background: #FF739C;
+    height: 100%;
+  }
+  .two {
+    height: 100%;
+    div {
+      height: 100%;
+      background: #CCC136;
+    }
+  }
+}
+
+.content {
+  h3 {
+    margin: 10px;
+  }
+  div {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  div:nth-child(3n) {
+    background: #2F94B2;
+  }
+  div:nth-child(3n+1) {
+    background: #FF7311;
+  }
+  div:nth-child(3n+2) {
+    background: #5DD9FF;
+  }
+}
+
+////  GRID
+
+.page {
+  @include container;
+}
+
+header {
+  @include full;
+}
+
+.hero {
+  clear: both;
+  .one {
+    @include breakpoint(max-width $breakpoint-md){
+      @include full;
+      margin-bottom: 1em;
+    }
+    @include breakpoint($breakpoint-md){
+      @include span(first 4);
+    }
+
+  }
+  .two {
+    @include breakpoint(max-width $breakpoint-md){
+      @include full;
+    }
+    @include breakpoint($breakpoint-md){
+      @include span(last 8 nest);
+    }
+
+
+    div:nth-child(4n+1) {
+      //clear: both;
+      @include span(2 at 1 of 8);
+    }
+    div:nth-child(4n+2) {
+      @include span(2 at 3 of 8);
+    }
+    div:nth-child(4n+3) {
+      @include span(2 at 5 of 8);
+    }
+    div:nth-child(4n) {
+      @include span(last 2 of 8);
+    }
+    div:nth-child(4) {
+      @include span(last 2 of 8);
+    }
+  }
+}
+
+.content {
+  div {
+    @include gallery(4);
+  }
+}

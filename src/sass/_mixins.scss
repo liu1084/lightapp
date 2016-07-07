@@ -1,0 +1,11 @@
+//circle imgage
+@mixin avatar($imageUrl) {
+  $height: 80 * $onePx;
+  $width: 80 * $onePx;
+  @include border-radius($height, $width);
+  height: $height;
+  width: $width;
+  padding: 0;
+  margin: 10 * $onePx 20 * $onePx 10 * $onePx 30 * $onePx;
+  background: #ffffff url($imageUrl) no-repeat center center transparent;
+}

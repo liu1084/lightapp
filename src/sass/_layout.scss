@@ -1,0 +1,40 @@
+@import "grids";
+@import "variables";
+
+.container {
+  @include container;
+  .header {
+    div:nth-child(3n) {
+      @include span(3 at 1 of 12);
+    }
+    div:nth-child(3n+1) {
+      @include span(3 at 2 of 12)
+    }
+    div:nth-child(3n+2) {
+      @include span(3 at 3 of 12)
+    }
+  }
+
+  .all-doc {
+    div:nth-child(2n+1){
+      @include span(6 at 1 of 12);
+    }
+
+    div:nth-child(2n+2){
+      @include span(6 at 1 of 12);
+    }
+  }
+
+  .list {
+    
+  }
+
+  .footer {
+
+  }
+}
+
+.container-fluid {
+  @extend .container;
+  @include full;
+}
