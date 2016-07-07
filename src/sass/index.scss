@@ -1,7 +1,95 @@
-.container{
+@import "layout";
+@import "global";
+@import "compass";
+@import "mixins";
+
+.container {
   @include container;
+
+  .header {
+    height: $headerHeight;
+    div{
+      height: $headerHeight;
+      line-height: $headerHeight;
+      text-align: center;
+      background-color: #f9f9f9;
+      font-size: 12 * $onePx;
+
+    }
+    div:nth-child(3n+1) {
+      color: #5b8de4;
+      border-bottom-color: #5b8de4;
+      border-bottom-width: 6 * $onePx;
+      border-bottom-style: solid;
+    }
+  }
+
+  .all-doc{
+    height: $allDocHeight;
+    background-color: #ffffff;
+    div{
+      height: $allDocHeight;
+      line-height: $allDocHeight;
+      padding: 0 30 * $onePx;
+      font-size: 14 * $onePx;
+    }
+
+    div:nth-child(2n+1){
+      text-align: left;
+    }
+
+    div:nth-child(2n+2){
+      text-align: right;
+      span{
+        display: inline-block;
+        line-height: 36 * $onePx;
+        text-align: center;
+      }
+      span:nth-child(2n+1){
+        height: 36 * $onePx;
+        width: 72 * $onePx;
+        @include border-radius(2*$onePx);
+        background-color: #5b8de4;
+        font-weight: 500;
+        color: #ffffff;
+      }
+      span:nth-child(2n+2){
+        font-weight: 500;
+        color: #cdcdd3;
+      }
+    }
+  }
+
+
+  .list{
+    font-size: 12 * $onePx;
+    .list-header{
+      padding: 0 30 * $onePx;
+      height: $listHeaderHeight;
+      line-height: $listHeaderHeight;
+      background-color: #f2f2f4;
+    }
+    .list-body{
+      padding: 10 * $onePx 0 10 * $onePx 30 * $onePx;
+      height: $listBodyHeight;
+      line-height: $listBodyHeight;
+      box-sizing: border-box;
+      .avatar{
+        margin-right: 20 * $onePx;
+
+        img{
+          height: 80 * $onePx;
+          width: 80 * $onePx;
+        }
+      }
+
+      .item{
+
+      }
+    }
+  }
 }
 
-.container-fluid{
+.container-fluid {
   @extend .container;
 }

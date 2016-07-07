@@ -5,6 +5,11 @@ $font-size-base: 16px;
 //1px = .0625em, 16px = 1em
 $onePx: .0625rem;
 
+$headerHeight: 80 * $onePx;
+$allDocHeight: 90 * $onePx;
+$listBodyHeight: 100 * $onePx;
+$listHeaderHeight: 50 * $onePx;
+
 //breakpoint
 $breakpoint-sm: 554 * $onePx;
 $breakpoint-md: 768 * $onePx;

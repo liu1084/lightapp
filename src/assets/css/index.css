@@ -1,72 +1,139 @@
-/*
-Error: Undefined mixin 'container'.
-        on line 2 of D:/work/Neusoft/web-app-sugar/src/sass/index.scss, in `container'
-        from line 2 of D:/work/Neusoft/web-app-sugar/src/sass/index.scss
+.container, .container-fluid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after, .container-fluid:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.container .header nav div, .container-fluid .header nav div {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3333%;
+  float: left;
+}
+.container .all-doc div:nth-child(2n+1), .container-fluid .all-doc div:nth-child(2n+1) {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.container .all-doc div:nth-child(2n+2), .container-fluid .all-doc div:nth-child(2n+2) {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+}
+.container .list .list-body .avatar, .container-fluid .list .list-body .avatar {
+  width: 15.25424%;
+  float: left;
+}
+.container .list .list-body .item, .container-fluid .list .list-body .item {
+  width: 83.05085%;
+  float: right;
+  margin-right: 0;
+}
 
-1: .container{
-2:   @include container;
-3: }
-4: 
-5: .container-fluid{
-6:   @extend .container;
-7: }
+.container-fluid {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
 
-Backtrace:
-D:/work/Neusoft/web-app-sugar/src/sass/index.scss:2:in `container'
-D:/work/Neusoft/web-app-sugar/src/sass/index.scss:2
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'container'.\A         on line 2 of D:/work/Neusoft/web-app-sugar/src/sass/index.scss, in `container'\A         from line 2 of D:/work/Neusoft/web-app-sugar/src/sass/index.scss\A \A 1: .container{\A 2:   @include container;\A 3: }\A 4: \A 5: .container-fluid{\A 6:   @extend .container;\A 7: }"; }
+body {
+  font-family: "Microsoft YaHei", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.container, .container-fluid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after, .container-fluid:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.container .header, .container-fluid .header {
+  height: 5rem;
+}
+.container .header div, .container-fluid .header div {
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-size: 0.75rem;
+}
+.container .header div:nth-child(3n+1), .container-fluid .header div:nth-child(3n+1) {
+  color: #5b8de4;
+  border-bottom-color: #5b8de4;
+  border-bottom-width: 0.375rem;
+  border-bottom-style: solid;
+}
+.container .all-doc, .container-fluid .all-doc {
+  height: 5.625rem;
+  background-color: #ffffff;
+}
+.container .all-doc div, .container-fluid .all-doc div {
+  height: 5.625rem;
+  line-height: 5.625rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
+}
+.container .all-doc div:nth-child(2n+1), .container-fluid .all-doc div:nth-child(2n+1) {
+  text-align: left;
+}
+.container .all-doc div:nth-child(2n+2), .container-fluid .all-doc div:nth-child(2n+2) {
+  text-align: right;
+}
+.container .all-doc div:nth-child(2n+2) span, .container-fluid .all-doc div:nth-child(2n+2) span {
+  display: inline-block;
+  line-height: 2.25rem;
+  text-align: center;
+}
+.container .all-doc div:nth-child(2n+2) span:nth-child(2n+1), .container-fluid .all-doc div:nth-child(2n+2) span:nth-child(2n+1) {
+  height: 2.25rem;
+  width: 4.5rem;
+  -moz-border-radius: 0.125rem;
+  -webkit-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  background-color: #5b8de4;
+  font-weight: 500;
+  color: #ffffff;
+}
+.container .all-doc div:nth-child(2n+2) span:nth-child(2n+2), .container-fluid .all-doc div:nth-child(2n+2) span:nth-child(2n+2) {
+  font-weight: 500;
+  color: #cdcdd3;
+}
+.container .list, .container-fluid .list {
+  font-size: 0.75rem;
+}
+.container .list .list-header, .container-fluid .list .list-header {
+  padding: 0 1.875rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  background-color: #f2f2f4;
+}
+.container .list .list-body, .container-fluid .list .list-body {
+  padding: 0.625rem 0 0.625rem 1.875rem;
+  height: 6.25rem;
+  line-height: 6.25rem;
+  box-sizing: border-box;
+}
+.container .list .list-body .avatar, .container-fluid .list .list-body .avatar {
+  margin-right: 1.25rem;
+}
+.container .list .list-body .avatar img, .container-fluid .list .list-body .avatar img {
+  height: 5rem;
+  width: 5rem;
+}
