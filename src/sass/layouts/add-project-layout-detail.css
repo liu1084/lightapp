@@ -1,38 +1,23 @@
 /*
 Error: File to import not found or unreadable: susy.
-        on line 1 of config/_grids.scss
-        from line 1 of config/_layout.scss
-        from line 1 of index.scss
+        on line 1 of ../config/_grids.scss
+        from line 1 of add-project-layout-detail.scss
 
-1: @import "config/layout";
-2: @import "config/global";
-3: @import "compass";
-4: @import "config/mixins";
-5: 
-6: .container {
+1: @import "../config/grids";
+2: @import "../variables";
+3: 
+4: .container {
+5:   @include container;
+6:   .list {
 
 Backtrace:
-config/_grids.scss:1
-config/_layout.scss:1
-index.scss:1
+../config/_grids.scss:1
+add-project-layout-detail.scss:1
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -83,4 +68,4 @@ D:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: susy.\A         on line 1 of config/_grids.scss\A         from line 1 of config/_layout.scss\A         from line 1 of index.scss\A \A 1: @import \"config/layout\";\A 2: @import \"config/global\";\A 3: @import \"compass\";\A 4: @import \"config/mixins\";\A 5: \A 6: .container {"; }
+  content: "Error: File to import not found or unreadable: susy.\A         on line 1 of ../config/_grids.scss\A         from line 1 of add-project-layout-detail.scss\A \A 1: @import \"../config/grids\";\A 2: @import \"../variables\";\A 3: \A 4: .container {\A 5:   @include container;\A 6:   .list {"; }

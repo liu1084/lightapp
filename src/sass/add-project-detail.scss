@@ -1,0 +1,105 @@
+@import "layouts/add-project-layout-detail";
+@import "config/global";
+@import "compass";
+@import "config/mixins";
+
+.container {
+  @include container;
+
+  .list {
+    font-size: 12 * $onePx;
+    .list-header {
+      clear: both;
+      height: $listHeaderHeight;
+      line-height: $listHeaderHeight;
+      background-color: $listHeaderBackgroundColor;
+      padding: 0 15 * $onePx;
+
+      .title {
+        font-size: 12 * $onePx;
+      }
+
+      .project-count {
+        text-align: right;
+        color: #5b8de4;
+      }
+    }
+    .list-body {
+      font-size: 14 * $onePx;
+      height: $listBodyHeight;
+      line-height: $listBodyHeight;
+      box-sizing: border-box;
+      padding: 5 * $onePx 15 * $onePx;
+      .icon {
+        text-align: center;
+        padding-right: 5 * $onePx;
+        .i-checkbox {
+          height: 16 * $onePx;
+          width: 16 * $onePx;
+          margin: 0 15 * $onePx 0 0;
+          $backgroundColor: #ccc;
+          @include avatar(16 * $onePx, $backgroundColor);
+        }
+
+        .i-checkbox-unchecked {
+          @extend .i-checkbox;
+        }
+
+        .i-checkbox-checked {
+          @extend .i-checkbox;
+          $backgroundColor: #5b8de4;
+          @include avatar(16px, $backgroundColor);
+        }
+
+        .avatar {
+          height: 40 * $onePx;
+          width: 40 * $onePx;
+          line-height: 40 * $onePx;
+          display: inline-block;
+          text-align: center;
+          font-size: 18 * $onePx;
+          color: #fff;
+        }
+
+        .avatar-a {
+          @extend .avatar;
+          $backgroundColor: #ab703b;
+          @include avatar(40 * $onePx, $backgroundColor);
+        }
+        .avatar-b {
+          @extend .avatar;
+          $backgroundColor: #49c6d3;
+          @include avatar(40 * $onePx, $backgroundColor);
+        }
+        .avatar-c {
+          @extend .avatar;
+          $backgroundColor: #f55b23;
+          @include avatar(40 * $onePx, $backgroundColor);
+        }
+        .avatar-d {
+          @extend .avatar;
+          $backgroundColor: #f5a623;
+          @include avatar(40 * $onePx, $backgroundColor);
+        }
+        .avatar-e {
+          @extend .avatar;
+          $backgroundColor: #7ed321;
+          @include avatar(40 * $onePx, $backgroundColor);
+        }
+      }
+
+      .item {
+        border-bottom: .5 * $onePx solid #cdcdd3;
+        box-sizing: border-box;
+      }
+
+      .item:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.container-fluid {
+  @extend .container;
+}

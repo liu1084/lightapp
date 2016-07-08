@@ -15,6 +15,20 @@
   width: 33.3333%;
   float: left;
 }
+.container .header .title, .container-fluid .header .title {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+.container .header .project-count, .container-fluid .header .project-count {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
 .container .all-doc div:nth-child(2n+1), .container-fluid .all-doc div:nth-child(2n+1) {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -54,6 +68,16 @@ body {
   font-size: 16px;
 }
 
+ul, li, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input, select, input:focus {
+  border: none;
+}
+
 .container, .container-fluid {
   max-width: 100%;
   margin-left: auto;
@@ -65,11 +89,11 @@ body {
   clear: both;
 }
 .container .header, .container-fluid .header {
-  height: 5rem;
+  height: 2.5rem;
 }
 .container .header div, .container-fluid .header div {
-  height: 5rem;
-  line-height: 5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   text-align: center;
   background-color: #f9f9f9;
   font-size: 0.75rem;
@@ -81,12 +105,12 @@ body {
   border-bottom-style: solid;
 }
 .container .all-doc, .container-fluid .all-doc {
-  height: 5.625rem;
+  height: 2.8125rem;
   background-color: #ffffff;
 }
 .container .all-doc div, .container-fluid .all-doc div {
-  height: 5.625rem;
-  line-height: 5.625rem;
+  height: 2.8125rem;
+  line-height: 2.8125rem;
   padding: 0 1.875rem;
   font-size: 0.875rem;
 }
@@ -119,21 +143,28 @@ body {
   font-size: 0.75rem;
 }
 .container .list .list-header, .container-fluid .list .list-header {
-  padding: 0 1.875rem;
-  height: 3.125rem;
-  line-height: 3.125rem;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
   background-color: #f2f2f4;
 }
 .container .list .list-body, .container-fluid .list .list-body {
-  padding: 0.625rem 0 0.625rem 1.875rem;
-  height: 6.25rem;
-  line-height: 6.25rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
   box-sizing: border-box;
 }
 .container .list .list-body .avatar, .container-fluid .list .list-body .avatar {
-  margin-right: 1.25rem;
-}
-.container .list .list-body .avatar img, .container-fluid .list .list-body .avatar img {
   height: 5rem;
+  line-height: 5rem;
+  text-align: center;
   width: 5rem;
+  background-color: #5b8de4;
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #ccc;
+  display: inline-block;
+  font-size: 1.125rem;
+  color: #fff;
 }

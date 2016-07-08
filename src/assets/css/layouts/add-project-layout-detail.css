@@ -1,0 +1,49 @@
+.container, .container-fluid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after, .container-fluid:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.container .list .list-header .title, .container-fluid .list .list-header .title {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+.container .list .list-header .project-count, .container-fluid .list .list-header .project-count {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  margin-right: 0;
+}
+.container .list .list-body .icon, .container-fluid .list .list-body .icon {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+.container .list .list-body .item, .container-fluid .list .list-body .item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  float: right;
+  margin-right: 0;
+}
+
+.container-fluid {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}

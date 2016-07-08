@@ -1,0 +1,9 @@
+//circle imgage
+@mixin avatar($radius: 40 * $onePx, $backgroundColor: #ccc) {
+  @include border-radius($radius);
+  height: $radius;
+  width: $radius;
+  background-color: $backgroundColor;
+  display: inline-block;
+  //background: #ffffff url($imageUrl) no-repeat center center transparent;
+}

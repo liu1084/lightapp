@@ -1,0 +1,30 @@
+@import "../config/grids";
+@import "../variables";
+
+.container {
+  @include container;
+  .list {
+    .list-header {
+      .title {
+        @include full;
+      }
+    }
+
+    .list-body {
+      .item{
+        label{
+          @include span(first 30% no-gutter border-box)
+        }
+      }
+    }
+  }
+
+  .footer {
+
+  }
+}
+
+.container-fluid {
+  @extend .container;
+  @include full;
+}

@@ -1,7 +1,7 @@
-@import "layout";
-@import "global";
+@import "config/layout";
+@import "config/global";
 @import "compass";
-@import "mixins";
+@import "config/mixins";
 
 .container {
   @include container;
@@ -64,23 +64,23 @@
   .list{
     font-size: 12 * $onePx;
     .list-header{
-      padding: 0 30 * $onePx;
       height: $listHeaderHeight;
       line-height: $listHeaderHeight;
       background-color: #f2f2f4;
     }
     .list-body{
-      padding: 10 * $onePx 0 10 * $onePx 30 * $onePx;
       height: $listBodyHeight;
       line-height: $listBodyHeight;
       box-sizing: border-box;
       .avatar{
-        margin-right: 20 * $onePx;
-
-        img{
-          height: 80 * $onePx;
-          width: 80 * $onePx;
-        }
+        height: 80 * $onePx;
+        line-height: 80 * $onePx;
+        text-align: center;
+        width: 80 * $onePx;
+        background-color: #5b8de4;
+        @include avatar;
+        font-size: 18* $onePx;
+        color: #fff;
       }
 
       .item{

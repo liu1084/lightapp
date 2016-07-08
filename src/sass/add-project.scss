@@ -1,0 +1,41 @@
+@import "layouts/add-project-layout";
+@import "config/global";
+@import "compass";
+@import "config/mixins";
+
+.container {
+  @include container;
+  .list {
+    .list-header {
+      clear: both;
+      padding: 0 15 * $onePx;
+      height: $listHeaderHeight;
+      line-height: $listHeaderHeight;
+      background-color: $listHeaderBackgroundColor;
+
+      .title {
+        font-size: 12 * $onePx;
+      }
+    }
+    .list-body {
+      padding: 0 15 * $onePx;
+      font-size: 14 * $onePx;
+      height: $listBodyHeight2;
+      line-height: $listBodyHeight2;
+      box-sizing: border-box;
+
+      .item {
+        border-bottom: .5 * $onePx solid #cdcdd3;
+        box-sizing: border-box;
+      }
+
+      .item:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.container-fluid {
+  @extend .container;
+}

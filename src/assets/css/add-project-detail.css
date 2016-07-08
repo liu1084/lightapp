@@ -1,0 +1,185 @@
+.container, .container-fluid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after, .container-fluid:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.container .list .list-header .title, .container-fluid .list .list-header .title {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+.container .list .list-header .project-count, .container-fluid .list .list-header .project-count {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  margin-right: 0;
+}
+.container .list .list-body .icon, .container-fluid .list .list-body .icon {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+.container .list .list-body .item, .container-fluid .list .list-body .item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  float: right;
+  margin-right: 0;
+}
+
+.container-fluid {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body {
+  font-family: "Microsoft YaHei", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+ul, li, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input, select, input:focus {
+  border: none;
+}
+
+.container, .container-fluid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after, .container-fluid:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.container .list, .container-fluid .list {
+  font-size: 0.75rem;
+}
+.container .list .list-header, .container-fluid .list .list-header {
+  clear: both;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
+  background-color: #f2f2f4;
+  padding: 0 0.9375rem;
+}
+.container .list .list-header .title, .container-fluid .list .list-header .title {
+  font-size: 0.75rem;
+}
+.container .list .list-header .project-count, .container-fluid .list .list-header .project-count {
+  text-align: right;
+  color: #5b8de4;
+}
+.container .list .list-body, .container-fluid .list .list-body {
+  font-size: 0.875rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  box-sizing: border-box;
+  padding: 0.3125rem 0.9375rem;
+}
+.container .list .list-body .icon, .container-fluid .list .list-body .icon {
+  text-align: center;
+  padding-right: 0.3125rem;
+}
+.container .list .list-body .icon .i-checkbox, .container-fluid .list .list-body .icon .i-checkbox, .container .list .list-body .icon .i-checkbox-unchecked, .container-fluid .list .list-body .icon .i-checkbox-unchecked, .container .list .list-body .icon .i-checkbox-checked, .container-fluid .list .list-body .icon .i-checkbox-checked {
+  height: 1rem;
+  width: 1rem;
+  margin: 0 0.9375rem 0 0;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: #ccc;
+  display: inline-block;
+}
+.container .list .list-body .icon .i-checkbox-checked, .container-fluid .list .list-body .icon .i-checkbox-checked {
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  height: 16px;
+  width: 16px;
+  background-color: #5b8de4;
+  display: inline-block;
+}
+.container .list .list-body .icon .avatar, .container-fluid .list .list-body .icon .avatar, .container .list .list-body .icon .avatar-a, .container-fluid .list .list-body .icon .avatar-a, .container .list .list-body .icon .avatar-b, .container-fluid .list .list-body .icon .avatar-b, .container .list .list-body .icon .avatar-c, .container-fluid .list .list-body .icon .avatar-c, .container .list .list-body .icon .avatar-d, .container-fluid .list .list-body .icon .avatar-d, .container .list .list-body .icon .avatar-e, .container-fluid .list .list-body .icon .avatar-e {
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #fff;
+}
+.container .list .list-body .icon .avatar-a, .container-fluid .list .list-body .icon .avatar-a {
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #ab703b;
+  display: inline-block;
+}
+.container .list .list-body .icon .avatar-b, .container-fluid .list .list-body .icon .avatar-b {
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #49c6d3;
+  display: inline-block;
+}
+.container .list .list-body .icon .avatar-c, .container-fluid .list .list-body .icon .avatar-c {
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #f55b23;
+  display: inline-block;
+}
+.container .list .list-body .icon .avatar-d, .container-fluid .list .list-body .icon .avatar-d {
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #f5a623;
+  display: inline-block;
+}
+.container .list .list-body .icon .avatar-e, .container-fluid .list .list-body .icon .avatar-e {
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #7ed321;
+  display: inline-block;
+}
+.container .list .list-body .item, .container-fluid .list .list-body .item {
+  border-bottom: 0.03125rem solid #cdcdd3;
+  box-sizing: border-box;
+}
+.container .list .list-body .item:last-child, .container-fluid .list .list-body .item:last-child {
+  border-bottom: none;
+}

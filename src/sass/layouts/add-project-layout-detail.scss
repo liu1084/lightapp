@@ -1,0 +1,43 @@
+@import "../config/grids";
+@import "../variables";
+
+.container {
+  @include container;
+  .list {
+    .list-header {
+      .title {
+        @include span(50% no-gutter border-box)
+      }
+
+      .project-count {
+        @include span(last 50% no-gutter border-box)
+      }
+    }
+
+    .list-body {
+      .icon{
+        @include span(25% no-gutter border-box);
+        overflow: hidden;
+        .i-checkbox{
+
+        }
+        .avatar{
+
+        }
+      }
+
+      .item{
+        @include span(last 75% no-gutter border-box);
+      }
+    }
+  }
+
+  .footer {
+
+  }
+}
+
+.container-fluid {
+  @extend .container;
+  @include full;
+}
