@@ -5,7 +5,6 @@
 
 .container {
   @include container;
-
   .list {
     font-size: 12 * $onePx;
     .list-header {
@@ -24,12 +23,14 @@
         color: #5b8de4;
       }
     }
+
     .list-body {
       font-size: 14 * $onePx;
       height: $listBodyHeight;
       line-height: $listBodyHeight;
       box-sizing: border-box;
       padding: 5 * $onePx 15 * $onePx;
+
       .icon {
         text-align: center;
         padding-right: 5 * $onePx;
@@ -38,7 +39,13 @@
           width: 16 * $onePx;
           margin: 0 15 * $onePx 0 0;
           $backgroundColor: #ccc;
+          position: relative;
+          color: #fff;
           @include avatar(16 * $onePx, $backgroundColor);
+
+          span[class^="icon-"], span[class*=" icon-"]{
+            font-family: "jim-font";
+          }
         }
 
         .i-checkbox-unchecked {
