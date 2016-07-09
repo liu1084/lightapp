@@ -50,8 +50,9 @@ ul, li, ol {
 }
 
 input, select, input:focus {
-  border: none;
+  border: 0;
   height: 2.5rem;
+  background-color: #fff;
 }
 
 .container, .container-fluid {

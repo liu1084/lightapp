@@ -9,7 +9,8 @@ ul, li, ol {
   margin: 0;
 }
 
-input, select, input:focus{
-  border: none;
+input, select, input:focus {
+  border: 0;
   height: 40 * $onePx;
+  background-color: #fff;
 }

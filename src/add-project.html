@@ -47,34 +47,32 @@
                 <form>
                     <ul>
                         <li class="item">
-                            <label for="pname" class="name">项目名称</label>
-                            <input type="text" value="" placeholder="输入名称(必填)" name="pname" id="pname" />
+                            <label for="name" class="name">项目名称</label>
+                            <input type="text" value="" placeholder="输入名称(必填)" name="name" id="name" />
+                            <input type="hidden" name="id" id="id" />
                         </li>
                         <li class="item">
-                            <label for="cname" class="name">客户名称</label>
-                            <input type="text" value="" placeholder="输入名称(必填)" name="cname" id="cname" />
+                            <label for="custName" class="name">客户名称</label>
+                            <input type="text" value="" placeholder="输入名称(必填)" name="custName" id="custName" />
                         </li>
                         <li class="item">
-                            <label for="pstatus" class="name">项目状态</label>
-                            <select name="pstatus" id="pstatus">
-                                <option value="初始">初始</option>
-                                <option value="进行">进行</option>
+                            <label for="status" class="name">项目状态</label>
+                            <select name="status" id="status">
+                                <option selected="selected" value="初始">初始</option>
+                                <option value="跟进">跟进</option>
                                 <option value="投标">投标</option>
                                 <option value="中标">中标</option>
+                                <option value="生效">生效</option>
+                                <option value="终止">终止</option>
                             </select>
                         </li>
                         <li class="item">
-                            <label for="tdate" class="name">投标日期</label>
-                            <select name="tdate" id="tdate">
-                                <option value="初始">初始</option>
-                                <option value="进行">进行</option>
-                                <option value="投标">投标</option>
-                                <option value="中标">中标</option>
-                            </select>
+                            <label for="signDate" class="name">投标日期</label>
+                            <input type="date" value="" placeholder="无" id="signDate" name="signDate" />
                         </li>
                         <li class="item">
-                            <label for="hnumber" class="name">合同金额</label>
-                            <input type="text" value="" placeholder="单位万元" name="hnumber" id="hnumber" />
+                            <label for="projectMoney" class="name">合同金额</label>
+                            <input type="text" value="" placeholder="单位万元" name="projectMoney" id="projectMoney" />
                         </li>
                     </ul>
                 </form>
@@ -140,6 +138,22 @@
                             <span class="number">
                                 <input value="" placeholder="输入金额" type="text" />
                             </span>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </li>
+        <li class="products">
+            <div class="list-header">
+                <div class="title">项目描述</div>
+                <div class="project-count">&nbsp;</div>
+            </div>
+            <div class="list-body">
+                <form>
+                    <ul>
+                        <li class="item">
+                            <label for="remark" class="remark">备注</label>
+                            <input type="text" value="" placeholder="输入相关备注信息" name="remark" id="remark" style="width: 95%;" />
                         </li>
                     </ul>
                 </form>
