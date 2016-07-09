@@ -11,4 +11,5 @@ ul, li, ol {
 
 input, select, input:focus{
   border: none;
+  height: 40 * $onePx;
 }

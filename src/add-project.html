@@ -28,77 +28,135 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>web-app-sugar -- 新增项目</title>
+    <title>web-app-sugar -- 产品新增</title>
     <link rel="shortcut icon" href="assets/img/favicon.ico"/>
     <link rel="stylesheet" href="../vendor/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="../src/assets/css/icon/fonts.css"/>
     <link rel="stylesheet" href="../src/assets/css/add-project.css"/>
 </head>
 <body>
+
 <div class="container">
     <ul>
-        <li class="list">
+        <li class="base">
             <div class="list-header">
                 <div class="title">基本信息</div>
+                <div class="project-count">&nbsp;</div>
             </div>
             <div class="list-body">
-                <div class="item">
-                    <label for="project-name">项目名称</label>
-                    <input type="text" value="" placeholder="输入名称(必填)" id="project-name" name="project-name" />
-                </div>
-
-                <div class="item">
-                    <label for="custom-name">客户名称</label>
-                    <input type="text" value="" placeholder="输入名称(必填)" id="custom-name" name="custom-name"/>
-                </div>
-
-                <div class="item">
-                    <label for="project-status">项目状态</label>
-                    <select name="project-status" id="project-status">
-                        <option>初始</option>
-                        <option>进行中</option>
-                        <option>完成</option>
-                    </select>
-                </div>
-
-                <div class="item">
-                    <label for="vote-date">投标日期</label>
-                    <input type="date" value="" id="vote-date" name="vote-date" />
-                </div>
-
-                <div class="item">
-                    <label for="money">合同金额</label>
-                    <input type="number" value="" name="money" id="money">
-                </div>
+                <form>
+                    <ul>
+                        <li class="item">
+                            <label for="pname" class="name">项目名称</label>
+                            <input type="text" value="" placeholder="输入名称(必填)" name="pname" id="pname" />
+                        </li>
+                        <li class="item">
+                            <label for="cname" class="name">客户名称</label>
+                            <input type="text" value="" placeholder="输入名称(必填)" name="cname" id="cname" />
+                        </li>
+                        <li class="item">
+                            <label for="pstatus" class="name">项目状态</label>
+                            <select name="pstatus" id="pstatus">
+                                <option value="初始">初始</option>
+                                <option value="进行">进行</option>
+                                <option value="投标">投标</option>
+                                <option value="中标">中标</option>
+                            </select>
+                        </li>
+                        <li class="item">
+                            <label for="tdate" class="name">投标日期</label>
+                            <select name="tdate" id="tdate">
+                                <option value="初始">初始</option>
+                                <option value="进行">进行</option>
+                                <option value="投标">投标</option>
+                                <option value="中标">中标</option>
+                            </select>
+                        </li>
+                        <li class="item">
+                            <label for="hnumber" class="name">合同金额</label>
+                            <input type="text" value="" placeholder="单位万元" name="hnumber" id="hnumber" />
+                        </li>
+                    </ul>
+                </form>
             </div>
-
+        </li>
+        <li class="products">
             <div class="list-header">
                 <div class="title">产品信息</div>
-                <div class="project-count"></div>
+                <div class="project-count">&nbsp;</div>
             </div>
             <div class="list-body">
-                <div class="add-products">
-                    <span class="glyphicon glyphicon-plus"></span>
+                <div class="operate">
+                    <div class="add-sub">
+                        <span class="add">
+                            <i class="icon-nextui-icon-add"></i>
+                        </span>
+                        <span class="sub">
+                            <i class="icon-nextui-icon-delete"></i>
+                        </span>
+                    </div>
+                    <div class="del">
+                        <span>删除</span>
+                    </div>
                 </div>
-            </div>
-            <div class="list-header">
-                <div class="title">项目描述</div>
-                <div class="project-count"></div>
-            </div>
-            <div class="list-body">
-                <div class="item">
-                    <label for="memo">项目名称</label>
-                    <input type="text" value="" placeholder="请输入相关备注信息" id="memo" name="memo" />
-                </div>
+                <form>
+                    <ul>
+                        <li class="item">
+                            <span class="i-checkbox i-checkbox-checked">
+                                <span class="icon-nextui-icon-check"></span>
+                            </span>
+                            <span class="avatar avatar-c">D</span>
+                            <span class="description">DataExchange</span>
+                            <span class="number">
+                                <input value="" placeholder="输入金额" type="text" />
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="i-checkbox i-checkbox-checked">
+                                <span class="icon-nextui-icon-check"></span>
+                            </span>
+                            <span class="avatar avatar-c">D</span>
+                            <span class="description">DataExchange</span>
+                            <span class="number">
+                                <input value="" placeholder="输入金额" type="text" />
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="i-checkbox i-checkbox-checked">
+                                <span class="icon-nextui-icon-check"></span>
+                            </span>
+                            <span class="avatar avatar-c">D</span>
+                            <span class="description">DataExchange</span>
+                            <span class="number">
+                                <input value="" placeholder="输入金额" type="text" />
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="i-checkbox i-checkbox-checked">
+                                <span class="icon-nextui-icon-check"></span>
+                            </span>
+                            <span class="avatar avatar-c">D</span>
+                            <span class="description">DataExchange</span>
+                            <span class="number">
+                                <input value="" placeholder="输入金额" type="text" />
+                            </span>
+                        </li>
+                    </ul>
+                </form>
             </div>
         </li>
     </ul>
-    <div class="save">
-        <span class="glyphicon glyphicon-ok"></span>
+
+    <div>
+        <span class="apply-for">
+            <i class="icon-nextui-icon-check"></i>
+        </span>
     </div>
 </div>
 <!-- Javascript start -->
 <script src="../vendor/jquery/dist/jquery.js"></script>
-<script src="../vendor/angular/angular.js"></script>
 <!-- Javascript end -->
+
+<script src="../src/app/add-project.js"></script>
 </body>
 </html>

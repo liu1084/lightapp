@@ -6,108 +6,21 @@
 .container {
   @include container;
   .list {
-    font-size: 12 * $onePx;
-    overflow: hidden;
-    .list-header {
-      height: $listHeaderHeight;
-      line-height: $listHeaderHeight;
-      background-color: $listHeaderBackgroundColor;
-      padding: 0 15 * $onePx;
+    @include list;
+  }
 
-      .title {
-        font-size: 12 * $onePx;
-      }
-
-      .project-count {
-        text-align: right;
-        color: #5b8de4;
-      }
-    }
-
-    .list-body {
-      font-size: 14 * $onePx;
-      padding: 5 * $onePx 0;
-
-      .item {
-        box-sizing: content-box;
-        height: 40 * $onePx;
-        line-height: 40 * $onePx;
-        margin-bottom: 5 * $onePx;
-        padding: 0 0 5 * $onePx 15 * $onePx;
-        border-bottom: .5 * $onePx solid #cdcdd3;
-        .i-checkbox {
-          display: inline-block;
-          height: 16 * $onePx;
-          width: 16 * $onePx;
-          margin: 0 15 * $onePx 0 0;
-          position: relative;
-          color: #fff;
-          $backgroundColor: #ccc;
-          @include avatar(16 * $onePx, $backgroundColor);
-        }
-        .i-checkbox-unchecked {
-          @extend .i-checkbox;
-        }
-        .i-checkbox-checked {
-          @extend .i-checkbox;
-          $backgroundColor: #5b8de4;
-          @include avatar(16px, $backgroundColor);
-        }
-
-        .avatar {
-          display: inline-block;
-          height: 40 * $onePx;
-          width: 40 * $onePx;
-          line-height: 40 * $onePx;
-          text-align: center;
-          font-size: 18 * $onePx;
-          color: #fff;
-        }
-        .avatar-a {
-          @extend .avatar;
-          $backgroundColor: #ab703b;
-          @include avatar(40 * $onePx, $backgroundColor);
-        }
-        .avatar-b {
-          @extend .avatar;
-          $backgroundColor: #49c6d3;
-          @include avatar(40 * $onePx, $backgroundColor);
-        }
-        .avatar-c {
-          @extend .avatar;
-          $backgroundColor: #f55b23;
-          @include avatar(40 * $onePx, $backgroundColor);
-        }
-        .avatar-d {
-          @extend .avatar;
-          $backgroundColor: #f5a623;
-          @include avatar(40 * $onePx, $backgroundColor);
-        }
-        .avatar-e {
-          @extend .avatar;
-          $backgroundColor: #7ed321;
-          @include avatar(40 * $onePx, $backgroundColor);
-        }
-        .avatar-f {
-          @extend .avatar;
-          $backgroundColor: #5576d7;
-          @include avatar(40 * $onePx, $backgroundColor);
-        }
-
-        .description{
-          display: inline-block;
-          padding: 0 0 0 10 * $onePx;
-          border-bottom: .5 * $onePx solid #cdcdd3;
-        }
-
-        .description:last-child {
-          border-bottom: none;
-          vertical-align: top;
-        }
-      }
-      .item:last-child{
-        border-bottom: none;
-      }
+  .apply-for{
+    @include apply-for;
+    @include box-shadow(#5b8de4, 5px, 5px, 10px);
+    position: fixed;
+    right: 15 * $onePx;
+    bottom: 15 * $onePx;
+    font-size: 40 * $onePx;
+    color: #fff;
+    i{
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
   }
 }

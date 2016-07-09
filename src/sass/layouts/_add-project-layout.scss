@@ -3,22 +3,17 @@
 
 .container {
   @include container;
-  .list {
-    .list-header {
-      .title {
-        @include full;
+  .products {
+    .operate {
+      .add-sub {
+        @include span(50% no-gutter);
       }
-    }
 
-    .list-body {
-      .item{
-        label{
-          @include span(first 30% no-gutter border-box)
-        }
+      .del {
+        @include span(last 50% no-gutter);
       }
     }
   }
-
   .footer {
 
   }

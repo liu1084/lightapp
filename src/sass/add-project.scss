@@ -4,10 +4,8 @@
 @import "config/mixins";
 
 .container {
-  @include container;
-  .list {
+  .base {
     .list-header {
-      clear: both;
       padding: 0 15 * $onePx;
       height: $listHeaderHeight;
       line-height: $listHeaderHeight;
@@ -15,27 +13,79 @@
 
       .title {
         font-size: 12 * $onePx;
+        color: #2d3646;
       }
     }
     .list-body {
-      padding: 0 15 * $onePx;
+      padding: 0 0 0 15 * $onePx;
       font-size: 14 * $onePx;
-      height: $listBodyHeight2;
-      line-height: $listBodyHeight2;
       box-sizing: border-box;
-
       .item {
+        height: $listBodyHeight-45;
+        line-height: $listBodyHeight-45;
         border-bottom: .5 * $onePx solid #cdcdd3;
         box-sizing: border-box;
+        position: relative;
+        .name {
+          font-size: 14 * $onePx;
+          color: #4a4a4a;
+          margin-right: 15 * $onePx;
+        }
       }
-
-      .item:last-child{
+      .item:last-child {
         border-bottom: none;
       }
     }
   }
-}
 
-.container-fluid {
-  @extend .container;
+  .products {
+    .operate {
+      padding: 0 15 * $onePx;
+      margin-bottom: 5 * $onePx;
+      height: 50 * $onePx;
+      line-height: 50 * $onePx;
+      border-bottom: .5 * $onePx solid #cdcdd3;
+      .add-sub {
+        position: relative;
+        color: #999999;
+
+        font-size: 30 * $onePx;
+        .add {
+          position: absolute;
+          left: 0;
+          top: 10 * $onePx;
+        }
+
+        .sub {
+          position: absolute;
+          left: 60 * $onePx;
+          top: 10 * $onePx;
+        }
+      }
+
+      .del {
+        text-align: right;
+        color: #f55b23;
+        cursor: pointer;
+      }
+    }
+
+    @include product-list();
+
+  }
+
+  .apply-for {
+    @include apply-for;
+    @include box-shadow(#5b8de4, 5px, 5px, 10px);
+    position: fixed;
+    right: 15 * $onePx;
+    bottom: 15 * $onePx;
+    font-size: 40 * $onePx;
+    color: #fff;
+    i {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
 }

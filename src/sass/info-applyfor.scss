@@ -1,0 +1,70 @@
+@import "layouts/info-applyfor";
+@import "config/global";
+@import "compass";
+@import "config/mixins";
+
+.container {
+  @include container;
+
+  nav {
+    height: $headerHeight-50;
+    div{
+      height: $headerHeight-50;
+      line-height: $headerHeight-50;
+      text-align: center;
+      background-color: #f9f9f9;
+      font-size: 14 * $onePx;
+      cursor: pointer;
+    }
+    div.nav-active {
+      color: #5b8de4;
+      border-bottom-color: #5b8de4;
+      border-bottom-width: 6 * $onePx;
+      border-bottom-style: solid;
+    }
+  }
+
+  .all-doc{
+    height: $allDocHeight;
+    background-color: #ffffff;
+    div{
+      height: $allDocHeight;
+      line-height: $allDocHeight;
+      padding: 0 30 * $onePx;
+      font-size: 14 * $onePx;
+    }
+
+    div:nth-child(2n+1){
+      text-align: left;
+    }
+
+    div:nth-child(2n+2){
+      text-align: right;
+      position: relative;
+      span{
+        line-height: 36 * $onePx;
+        text-align: right;
+        display: inline-block;
+      }
+      span:nth-child(2n+1){
+        color: #5b8de4;
+        position: absolute;
+        right: 36 * $onePx;
+      }
+      span:nth-child(2n+2){
+        color: #cdcdd3;
+        position: absolute;
+        right: 20 * $onePx;
+      }
+    }
+  }
+
+
+  .list{
+    @include list(25px, 50px, #2d3646);
+  }
+}
+
+.container-fluid {
+  @extend .container;
+}
