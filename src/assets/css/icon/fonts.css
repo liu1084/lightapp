@@ -12,8 +12,8 @@
   text-transform: none;
   line-height: 1;
   position: absolute;
-  top: 1px;
-  left: -1px;
+  top: 0.0625rem;
+  left: -0.03125rem;
   cursor: pointer;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;

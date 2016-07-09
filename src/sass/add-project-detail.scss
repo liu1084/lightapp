@@ -7,8 +7,8 @@
   @include container;
   .list {
     font-size: 12 * $onePx;
+    overflow: hidden;
     .list-header {
-      clear: both;
       height: $listHeaderHeight;
       line-height: $listHeaderHeight;
       background-color: $listHeaderBackgroundColor;
@@ -26,32 +26,28 @@
 
     .list-body {
       font-size: 14 * $onePx;
-      height: $listBodyHeight;
-      line-height: $listBodyHeight;
-      box-sizing: border-box;
-      padding: 5 * $onePx 15 * $onePx;
+      padding: 5 * $onePx 0;
 
-      .icon {
-        text-align: center;
-        padding-right: 5 * $onePx;
+      .item {
+        box-sizing: content-box;
+        height: 40 * $onePx;
+        line-height: 40 * $onePx;
+        margin-bottom: 5 * $onePx;
+        padding: 0 0 5 * $onePx 15 * $onePx;
+        border-bottom: .5 * $onePx solid #cdcdd3;
         .i-checkbox {
+          display: inline-block;
           height: 16 * $onePx;
           width: 16 * $onePx;
           margin: 0 15 * $onePx 0 0;
-          $backgroundColor: #ccc;
           position: relative;
           color: #fff;
+          $backgroundColor: #ccc;
           @include avatar(16 * $onePx, $backgroundColor);
-
-          span[class^="icon-"], span[class*=" icon-"]{
-            font-family: "jim-font";
-          }
         }
-
         .i-checkbox-unchecked {
           @extend .i-checkbox;
         }
-
         .i-checkbox-checked {
           @extend .i-checkbox;
           $backgroundColor: #5b8de4;
@@ -59,15 +55,14 @@
         }
 
         .avatar {
+          display: inline-block;
           height: 40 * $onePx;
           width: 40 * $onePx;
           line-height: 40 * $onePx;
-          display: inline-block;
           text-align: center;
           font-size: 18 * $onePx;
           color: #fff;
         }
-
         .avatar-a {
           @extend .avatar;
           $backgroundColor: #ab703b;
@@ -93,14 +88,24 @@
           $backgroundColor: #7ed321;
           @include avatar(40 * $onePx, $backgroundColor);
         }
-      }
+        .avatar-f {
+          @extend .avatar;
+          $backgroundColor: #5576d7;
+          @include avatar(40 * $onePx, $backgroundColor);
+        }
 
-      .item {
-        border-bottom: .5 * $onePx solid #cdcdd3;
-        box-sizing: border-box;
-      }
+        .description{
+          display: inline-block;
+          padding: 0 0 0 10 * $onePx;
+          border-bottom: .5 * $onePx solid #cdcdd3;
+        }
 
-      .item:last-child {
+        .description:last-child {
+          border-bottom: none;
+          vertical-align: top;
+        }
+      }
+      .item:last-child{
         border-bottom: none;
       }
     }

@@ -15,19 +15,8 @@
     }
 
     .list-body {
-      .icon{
-        @include span(25% no-gutter border-box);
-        overflow: hidden;
-        .i-checkbox{
-
-        }
-        .avatar{
-
-        }
-      }
-
       .item{
-        @include span(last 75% no-gutter border-box);
+
       }
     }
   }
