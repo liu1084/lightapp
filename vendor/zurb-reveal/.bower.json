@@ -1,0 +1,14 @@
+{
+  "name": "zurb-reveal",
+  "homepage": "https://github.com/zurb/reveal",
+  "_release": "a7b1fd6b71",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a7b1fd6b71f968608dd258bc7571ad0aa8d92a2e"
+  },
+  "_source": "https://github.com/zurb/reveal.git",
+  "_target": "*",
+  "_originalSource": "zurb-reveal",
+  "_direct": true
+}

@@ -22,7 +22,6 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   ~ THE SOFTWARE.
   -->
-
 <html lang="en-us">
 <head>
     <meta charset="UTF-8"/>
@@ -31,14 +30,15 @@
     <title>产品新增</title>
     <link rel="shortcut icon" href="assets/img/favicon.ico"/>
     <link rel="stylesheet" href="../vendor/normalize-css/normalize.css"/>
-    <link rel="stylesheet" href="../vendor/select2/dist/css/select2.css"/>
+    <link rel="stylesheet" href="../vendor/PACE/themes/blue/pace-theme-minimal.css"/>
+    <link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../vendor/toastr/toastr.css"/>
     <link rel="stylesheet" href="../src/assets/css/icon/fonts.css"/>
-    <link rel="stylesheet" href="../src/assets/css/add-project.css"/>
 
+    <link rel="stylesheet" href="../src/assets/css/add-project.css"/>
 </head>
 <body>
-
-<div class="container">
+<div class="main">
     <ul>
         <li class="base">
             <div class="list-header">
@@ -50,12 +50,12 @@
                     <ul>
                         <li class="item">
                             <label for="name" class="name">项目名称</label>
-                            <input type="text" value="" placeholder="输入名称(必填)" name="name" id="name" />
-                            <input type="hidden" name="id" id="id" />
+                            <input type="text" value="" placeholder="输入名称(必填)" name="name" id="name"/>
+                            <input type="hidden" name="id" id="id"/>
                         </li>
                         <li class="item">
                             <label for="custName" class="name">客户名称</label>
-                            <input type="text" value="" placeholder="输入名称(必填)" name="custName" id="custName" />
+                            <input type="text" value="" placeholder="输入名称(必填)" name="custName" id="custName"/>
                         </li>
                         <li class="item">
                             <label for="status" class="name">项目状态</label>
@@ -70,11 +70,11 @@
                         </li>
                         <li class="item">
                             <label for="signDate" class="name">投标日期</label>
-                            <input type="date" value="" placeholder="选择投标日期" id="signDate" name="signDate" />
+                            <input type="date" value="" placeholder="选择投标日期" id="signDate" name="signDate"/>
                         </li>
                         <li class="item">
                             <label for="projectMoney" class="name">合同金额</label>
-                            <input type="text" value="" placeholder="单位万元" name="projectMoney" id="projectMoney" />
+                            <input type="text" value="" placeholder="单位万元" name="projectMoney" id="projectMoney"/>
                         </li>
                     </ul>
                 </form>
@@ -89,56 +89,44 @@
                 <div class="operate">
                     <div class="add-sub">
                         <span class="add">
-                            <i class="icon-nextui-icon-add"></i>
+                            <i class="icon-nextui-icon-add" data-reveal-id="myModal"></i>
                         </span>
                         <span class="sub">
                             <i class="icon-nextui-icon-delete"></i>
                         </span>
                     </div>
                     <div class="del">
-                        <span>删除</span>
+                        <span class="delete">删除</span>
                     </div>
                 </div>
                 <form>
                     <ul>
                         <li class="item">
-                            <span class="i-checkbox i-checkbox-checked">
-                                <span class="icon-nextui-icon-check"></span>
-                            </span>
                             <span class="avatar avatar-b">A</span>
                             <span class="description">DataExchange</span>
                             <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text" />
+                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
                             </span>
                         </li>
                         <li class="item">
-                            <span class="i-checkbox i-checkbox-checked">
-                                <span class="icon-nextui-icon-check"></span>
-                            </span>
                             <span class="avatar avatar-a">D</span>
                             <span class="description">DataExchange</span>
                             <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text" />
+                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
                             </span>
                         </li>
                         <li class="item">
-                            <span class="i-checkbox i-checkbox-checked">
-                                <span class="icon-nextui-icon-check"></span>
-                            </span>
                             <span class="avatar avatar-c">C</span>
                             <span class="description">DataExchange</span>
                             <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text" />
+                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
                             </span>
                         </li>
                         <li class="item">
-                            <span class="i-checkbox i-checkbox-checked">
-                                <span class="icon-nextui-icon-check"></span>
-                            </span>
                             <span class="avatar avatar-f">E</span>
                             <span class="description">DataExchange</span>
                             <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text" />
+                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
                             </span>
                         </li>
                     </ul>
@@ -154,7 +142,7 @@
                 <form>
                     <ul>
                         <li class="item">
-                            <textarea  placeholder="输入相关备注信息" name="remark" id="remark" rows="6"></textarea>
+                            <textarea placeholder="输入相关备注信息" name="remark" id="remark" rows="8"></textarea>
                         </li>
                     </ul>
                 </form>
@@ -162,17 +150,130 @@
         </li>
     </ul>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="products-select-modal">
+                        <li class="detail">
+                            <div class="list-header">
+                                <div class="title">UniEAP</div>
+                                <div class="project-count">已选 2</div>
+                            </div>
+                            <div class="list-body">
+                                <ul>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                            <input type="hidden" value="platform" name="projects"/>
+                        </span>
+                                        <span class="avatar avatar-a">P</span>
+                                        <span class="description">Platform</span>
+                                    </li>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-b">W</span>
+                                        <span class="description">Workflow</span>
+                                    </li>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-checked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-c">R</span>
+                                        <span class="description">Report</span>
+                                    </li>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-d">U</span>
+                                        <span class="description">UTF</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="detail">
+                            <div class="list-header">
+                                <div class="title">SaCa</div>
+                                <div class="project-count">&nbsp;</div>
+                            </div>
+                            <div class="list-body">
+                                <ul>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                            <input type="hidden" value="platform"/>
+                        </span>
+                                        <span class="avatar avatar-a">A</span>
+                                        <span class="description">Aclome</span>
+                                    </li>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-b">P</span>
+                                        <span class="description">P3</span>
+                                    </li>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-checked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-c">E</span>
+                                        <span class="description">EMM</span>
+                                    </li>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataExchange</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="detail">
+                            <div class="list-header">
+                                <div class="title">RealSight</div>
+                                <div class="project-count">&nbsp;</div>
+                            </div>
+                            <div class="list-body">
+                                <ul>
+                                    <li class="item">
+                        <span class="i-checkbox i-checkbox-unchecked">
+                            <span class="icon-nextui-icon-check"></span>
+                        </span>
+                                        <span class="avatar avatar-f">A</span>
+                                        <span class="description">APM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer" style="text-align: center; font-size: 12px;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">完成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div>
         <span class="apply-for">
-            <i class="icon-nextui-icon-check"></i>
+            <i class="icon-nextui-icon-check close-modal-close"></i>
         </span>
     </div>
 
-    <div class="footer">Copyright © 2016 Neusoft</div>
+    <div class="footer">Copyright Neusoft © 2012 - 2016</div>
 </div>
 <!-- Javascript start -->
 <script src="../vendor/jquery/dist/jquery.js"></script>
-<script src="../vendor/select2/dist/js/select2.full.js"></script>
+<script src="../vendor/bootstrap/js/dist/util.js"></script>
+<script src="../vendor/bootstrap/js/dist/modal.js"></script>
+<script src="../vendor/toastr/toastr.js"></script>
+<script src="../vendor/PACE/pace.js"></script>
 <!-- Javascript end -->
 
 <script src="../src/app/add-project.js"></script>

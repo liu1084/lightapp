@@ -1,7 +1,7 @@
 @import "../config/grids";
 @import "../variables";
 
-.container {
+.main {
   @include container;
   .products {
     .operate {
@@ -14,12 +14,16 @@
       }
     }
   }
-  .footer {
 
+  .detail {
+    .list-header {
+      .title {
+        @include span(50% no-gutter border-box)
+      }
+
+      .project-count {
+        @include span(last 50% no-gutter border-box)
+      }
+    }
   }
-}
-
-.container-fluid {
-  @extend .container;
-  @include full;
 }

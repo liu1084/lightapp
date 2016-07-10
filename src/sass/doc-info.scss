@@ -1,0 +1,114 @@
+@import "layouts/add-project-layout";
+@import "config/global";
+@import "compass";
+@import "config/mixins";
+
+.container {
+  .base {
+    .list-header {
+      padding: 0 15 * $onePx;
+      height: $listHeaderHeight;
+      line-height: $listHeaderHeight;
+      background-color: $listHeaderBackgroundColor;
+
+      .title {
+        font-size: 12 * $onePx;
+        color: #2d3646;
+      }
+    }
+    .list-body {
+      padding: 0 0 0 15 * $onePx;
+      font-size: 14 * $onePx;
+      box-sizing: border-box;
+      .item {
+        height: $listBodyHeight-45;
+        line-height: $listBodyHeight-45;
+        border-bottom: .5 * $onePx solid #cdcdd3;
+        box-sizing: border-box;
+        position: relative;
+        .name {
+          font-size: 14 * $onePx;
+          color: #4a4a4a;
+          margin-right: 15 * $onePx;
+        }
+      }
+      .item:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .products {
+    .operate {
+      padding: 0 15 * $onePx;
+      height: 55 * $onePx;
+      line-height: 50 * $onePx;
+      border-bottom: .5 * $onePx solid #cdcdd3;
+      .add-sub {
+        position: relative;
+        color: #999999;
+
+        font-size: 30 * $onePx;
+        .add {
+          position: absolute;
+          left: 0;
+          top: 10 * $onePx;
+        }
+
+        .sub {
+          position: absolute;
+          left: 40 * $onePx;
+          top: 10 * $onePx;
+        }
+      }
+
+      .del {
+        text-align: right;
+        color: #f55b23;
+        span{
+          cursor: pointer;
+        }
+      }
+    }
+
+    @include product-list;
+  }
+
+  .description {
+    .list-header {
+      padding: 0 15 * $onePx;
+      height: $listHeaderHeight;
+      line-height: $listHeaderHeight;
+      background-color: $listHeaderBackgroundColor;
+
+      .title {
+        font-size: 12 * $onePx;
+        color: #2d3646;
+      }
+    }
+    .list-body {
+      padding: 0 15 * $onePx;
+      height: 145 * $onePx;
+      .item {
+        padding: 16 * $onePx 0;
+        textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .apply-for {
+    @include apply-for;
+    @include box-shadow(#5b8de4, 5px, 5px, 10px);
+    position: fixed;
+    right: 15 * $onePx;
+    bottom: 15 * $onePx;
+    font-size: 40 * $onePx;
+    color: #fff;
+    i {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+}

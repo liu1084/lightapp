@@ -1,7 +1,7 @@
 @import "../config/grids";
 @import "../variables";
 
-.container {
+.main {
   @include container;
   nav {
     div {

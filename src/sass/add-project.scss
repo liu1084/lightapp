@@ -3,7 +3,7 @@
 @import "compass";
 @import "config/mixins";
 
-.container {
+.main {
   .base {
     .list-header {
       padding: 0 15 * $onePx;
@@ -37,7 +37,6 @@
       }
     }
   }
-
   .products {
     .operate {
       padding: 0 15 * $onePx;
@@ -73,7 +72,6 @@
 
     @include product-list;
   }
-
   .description {
     .list-header {
       padding: 0 15 * $onePx;
@@ -97,6 +95,9 @@
       }
     }
   }
+  .detail {
+    @include list;
+  }
   .apply-for {
     @include apply-for;
     @include box-shadow(#5b8de4, 5px, 5px, 10px);
@@ -111,4 +112,23 @@
       left: 10px;
     }
   }
+
+  //.modal-footer{
+  //  height: 80 * $onePx;
+  //  text-align: center;
+  //  .apply-for{
+  //    @include apply-for(30px);
+  //    @include box-shadow(#5b8de4, 5px, 5px, 10px);
+  //    position: fixed;
+  //    right: 15 * $onePx;
+  //    bottom: 15 * $onePx;
+  //    font-size: 40 * $onePx;
+  //    color: #fff;
+  //    i {
+  //      position: absolute;
+  //      top: 10px;
+  //      left: 10px;
+  //    }
+  //  }
+  //}
 }
