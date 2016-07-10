@@ -49,10 +49,31 @@ ul, li, ol {
   margin: 0;
 }
 
-input, select, input:focus {
+input, select, textarea, select {
   border: 0;
-  height: 2.5rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
   background-color: #fff;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="date"] {
+  height: 1.875rem;
+  line-height: 1.875rem;
+}
+
+.footer {
+  height: 6.25rem;
+  line-height: 6.25rem;
+  text-align: center;
+  background-color: #f2f2f4;
+}
+
+select, input {
+  width: 13.125rem;
+  max-width: 13.125rem;
 }
 
 .container, .container-fluid {

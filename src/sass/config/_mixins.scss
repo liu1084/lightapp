@@ -109,7 +109,9 @@
 
       .number{
         float: right;
-        width: 80 * $onePx
+        width: 80 * $onePx;
+        max-width: 80px;
+        margin-right: 15px;
       }
     }
     .item:last-child{

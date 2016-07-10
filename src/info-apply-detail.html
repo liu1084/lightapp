@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <title>资料申请</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+    <link rel="stylesheet" href="../vendor/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="assets/css/icon/fonts.css"/>
+    <link rel="stylesheet" href="assets/css/info-apply-detail.css"/>
+</head>
+<body>
+
+<div class="container">
+    <ul>
+        <li class="base">
+            <div class="list-header">
+                <div class="title">基本信息</div>
+                <div class="project-count">&nbsp;</div>
+            </div>
+            <div class="list-body">
+                <form>
+                    <ul>
+                        <li class="item">
+                            <label for="name" class="name">项目名称</label>
+                            <input type="text" value="" placeholder="输入名称(必填)" name="name" id="name" />
+                            <input type="hidden" name="id" id="id" />
+                        </li>
+                        <li class="item">
+                            <label for="custName" class="name">客户名称</label>
+                            <input type="text" value="" placeholder="输入名称(必填)" name="custName" id="custName" />
+                        </li>
+                        <li class="item">
+                            <label for="status" class="name">项目状态</label>
+                            <select name="status" id="status">
+                                <option selected="selected" value="初始">初始</option>
+                                <option value="跟进">跟进</option>
+                                <option value="投标">投标</option>
+                                <option value="中标">中标</option>
+                                <option value="生效">生效</option>
+                                <option value="终止">终止</option>
+                            </select>
+                        </li>
+                        <li class="item">
+                            <label for="signDate" class="name">投标日期</label>
+                            <input type="date" value="" placeholder="无" id="signDate" name="signDate" />
+                        </li>
+                        <li class="item">
+                            <label for="projectMoney" class="name">合同金额</label>
+                            <input type="text" value="" placeholder="单位万元" name="projectMoney" id="projectMoney" />
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </li>
+        <li class="products">
+            <div class="list-header">
+                <div class="title">产品信息</div>
+                <div class="project-count">&nbsp;</div>
+            </div>
+            <div class="list-body">
+                <div class="operate">
+                    <div class="add-sub">
+                        <span class="add">
+                            <i class="icon-nextui-icon-add"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="description">
+            <div class="list-header">
+                <div class="title">项目描述</div>
+                <div class="project-count">&nbsp;</div>
+            </div>
+            <div class="list-body">
+                <form>
+                    <ul>
+                        <li class="item">
+                            <textarea  placeholder="输入相关备注信息" name="remark" id="remark" rows="6"></textarea>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </li>
+    </ul>
+
+    <div>
+        <span class="apply-for">
+            <i class="icon-nextui-icon-check"></i>
+        </span>
+    </div>
+
+    <div class="footer">Copyright © 2016 Neusoft</div>
+</div>
+<!-- Javascript start -->
+<script src="../vendor/jquery/dist/jquery.js"></script>
+<!-- Javascript end -->
+
+<script src="app/info-apply-detail.js"></script>
+</body>
+</html>
