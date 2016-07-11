@@ -17,6 +17,7 @@ $(function () {
 
 var contextPath = '/workflow';
 var Neu = function(){
+    //this.selectedProducts = [{id: 1, name:'', money: 0}];
     this.selectedProducts = [];
     this.products = [];
 };
@@ -27,22 +28,21 @@ Neu.prototype = {
     },
     bind: function () {
         var _this = this;
-        $('.i-checkbox').off('click').on('click', function () {
+        $('.i-checkbox').on('click', function () {
             $(this).toggleClass('i-checkbox-checked');
             var productName = $(this).siblings('.description').text();
+            var productMoney = $(this).siblings('.number').children('input').val() ? $(this).siblings('.number').children('input').val() : 0;
             if ($(this).hasClass('i-checkbox-checked')){
-                _this.selectedProducts.push(productName);
+                _this.selectedProducts.push({name: productName, money: productMoney.toNumber()});
             }else {
-                _this.selectedProducts = $.grep(_this.selectedProducts, function(value){
-                    return productName !== value;
-                })
+                _this.selectedProducts = $.grep(_this.selectedProducts, function(product){
+                    return productName !== product.name;
+                });
             }
-            console.log(_this.selectedProducts);
         });
         $('.icon-nextui-icon-add').on('click', function () {
             //window.location.href = "add-project-detail.html";
             _this.getProducts();
-            console.log(_this.selectedProducts);
             $('#myModal')
                 .modal({
                     backdrop: 'static',
@@ -53,8 +53,8 @@ Neu.prototype = {
                     _this.selectedProductsOnModal();
                 })
                 .on('hidden.bs.modal', function(){
-                    _this.selectedProducts = $.unique($.merge(_this.selectedProducts, _this.getNewSelectedProducts()));
                     _this.renderSelectedProducts();
+                    _this.selectedProducts = ($.merge(_this.selectedProducts, _this.getNewSelectedProducts())).unique();
                 });
         });
 
@@ -81,13 +81,12 @@ Neu.prototype = {
             var lines = $('.products form').find('.item').find('span.i-checkbox-checked');
             $.each(lines, function(i, line){
                 var productName = $(line).parent('.item').children('.description').text();
-                _this.selectedProducts = $.grep(_this.selectedProducts, function(value){
-                    return value != productName;
+                _this.selectedProducts = $.grep(_this.selectedProducts, function(product){
+                    return productName != product.name;
                 });
 
                 $(line).parent('.item').remove();
             });
-            console.log(_this.selectedProducts);
         });
 
     },
@@ -100,7 +99,7 @@ Neu.prototype = {
             var status = $("#status").val();
             var signDate = $("#signDate").val();
             var projectMoney = $("#projectMoney").val();
-            var product = _this.selectedProducts.join('#');
+            var product = {products: _this.selectedProducts};
             var remark = $("#remark").html();
             if (name == null || name == "") {
                 toastr.warning('', '项目名不能为空');
@@ -130,32 +129,24 @@ Neu.prototype = {
     getProducts: function () {
         var _this = this;
         $(".products .list-body ul > .item").each(function(){
-            _this.selectedProducts.push($(this).find('.description').html());
+            var productName = $(this).find('.description').text();
+            var productMoney = $(this).find('.number').children('input').val() ? $(this).find('.number').children('input').val() : 0;
+            _this.selectedProducts.push({name: productName, money: productMoney.toNumber()});
         });
 
-        $.unique(_this.selectedProducts);
-    },
-    getNewSelectedProducts: function(){
-        var selectedProducts = [];
-        var products = $('.select-products .item .i-checkbox-checked');
-        $.each(products, function(i, p){
-            var thiz = this;
-            var productName = $(thiz).siblings('.description').text();
-            selectedProducts.push(productName);
-        });
-        return selectedProducts;
+        _this.selectedProducts.unique();
     },
     renderSelectedProducts: function(){
         var _this = this;
-        console.log(_this.selectedProducts);
         var html = '';
+        _this.selectedProducts = _this.selectedProducts.unique();
         $.each(_this.selectedProducts, function(i, p){
-            var letter = p.substr(0, 1);
+            var letter = p.name.substr(0, 1);
             html +='<li class="item">';
             html +='    <span class="avatar avatar-' + letter.toLowerCase() + '">' + letter + '</span>';
-            html +='    <span class="description">' + p + '</span>';
+            html +='    <span class="description">' + p.name + '</span>';
             html +='    <span class="number">';
-            html +='        <input value="" maxlength="10" placeholder="输入金额" type="text"/>';
+            html +='        <input value="' + p.money + '" maxlength="10" placeholder="输入金额" type="text"/>';
             html +='    </span>';
             html +='</li>';
         });
@@ -163,15 +154,32 @@ Neu.prototype = {
         $('.products .list-body ul').html(html);
         $('.icon-nextui-icon-delete').attr('show-select', false);
     },
+    getNewSelectedProducts: function(){
+        var selectedProducts = [];
+        var products = $('.select-products .item .i-checkbox-checked');
+        $.each(products, function(i, p){
+            var thiz = this;
+            var productName = $(thiz).siblings('.description').text();
+            var productMoney = $(this).siblings('.number').children('input').val() ? $(this).siblings('.number').children('input').val() : 0;
+            selectedProducts.push({name: productName, money: productMoney.toNumber()});
+        });
+        return selectedProducts;
+    },
     selectedProductsOnModal: function(){
         var _this = this;
+        _this.selectedProducts = _this.selectedProducts.unique();
         var products = $('.select-products .item .i-checkbox');
         $.each(products, function(i, p){
             var productName = $(this).siblings('.description').text();
-            if ($.inArray(productName, _this.selectedProducts) > -1){
-                $(this).removeClass('i-checkbox-unchecked').addClass('i-checkbox-checked');
+            var that = this;
+            var result = _this.selectedProducts.find(function(p){
+                return p.name === productName;
+            });
+
+            if (result){
+                $(that).removeClass('i-checkbox-unchecked').addClass('i-checkbox-checked');
             }else{
-                $(this).removeClass('i-checkbox-checked').addClass('i-checkbox-unchecked');
+                $(that).removeClass('i-checkbox-checked').addClass('i-checkbox-unchecked');
             }
         });
     }
