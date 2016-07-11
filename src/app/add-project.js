@@ -39,6 +39,8 @@ Neu.prototype = {
                     return productName !== product.name;
                 });
             }
+
+            _this.countSelected();
         });
         $('.icon-nextui-icon-add').on('click', function () {
             //window.location.href = "add-project-detail.html";
@@ -51,6 +53,7 @@ Neu.prototype = {
                 })
                 .on('show.bs.modal', function(e){
                     _this.selectedProductsOnModal();
+                    _this.countSelected();
                 })
                 .on('hidden.bs.modal', function(){
                     _this.renderSelectedProducts();
@@ -182,5 +185,9 @@ Neu.prototype = {
                 $(that).removeClass('i-checkbox-checked').addClass('i-checkbox-unchecked');
             }
         });
+    },
+    countSelected: function(){
+        var count = this.selectedProducts.length;
+        $('.select-count').text(count);
     }
 };
