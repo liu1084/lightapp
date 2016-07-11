@@ -71,27 +71,32 @@
         $backgroundColor: #ab703b;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-b {
+      .avatar-a, .avatar-g, .avatar-m, .avatar-s, .avatar-x {
+        @extend .avatar;
+        $backgroundColor: #ab703b;
+        @include avatar(40 * $onePx, $backgroundColor);
+      }
+      .avatar-b, .avatar-h, .avatar-n, .avatar-t, .avatar-y {
         @extend .avatar;
         $backgroundColor: #49c6d3;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-c {
+      .avatar-c, .avatar-i, .avatar-o, .avatar-u, .avatar-z {
         @extend .avatar;
         $backgroundColor: #f55b23;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-d {
+      .avatar-d, .avatar-j, .avatar-p, .avatar-v {
         @extend .avatar;
         $backgroundColor: #f5a623;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-e {
+      .avatar-e, .avatar-k, .avatar-q, .avatar-w {
         @extend .avatar;
         $backgroundColor: #7ed321;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-f {
+      .avatar-f, .avatar-l, .avatar-r, .avatar-g {
         @extend .avatar;
         $backgroundColor: #5576d7;
         @include avatar(40 * $onePx, $backgroundColor);
@@ -111,7 +116,6 @@
         float: right;
         width: 80 * $onePx;
         max-width: 80px;
-        margin-right: 15px;
       }
     }
     .item:last-child{
@@ -176,34 +180,35 @@
         line-height: 40 * $onePx;
         text-align: center;
         font-size: 18 * $onePx;
-        color: #fff;
+        color: #FFF;
       }
-      .avatar-a {
+
+      .avatar-a, .avatar-g, .avatar-m, .avatar-s, .avatar-x {
         @extend .avatar;
         $backgroundColor: #ab703b;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-b {
+      .avatar-b, .avatar-h, .avatar-n, .avatar-t, .avatar-y {
         @extend .avatar;
         $backgroundColor: #49c6d3;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-c {
+      .avatar-c, .avatar-i, .avatar-o, .avatar-u, .avatar-z {
         @extend .avatar;
         $backgroundColor: #f55b23;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-d {
+      .avatar-d, .avatar-j, .avatar-p, .avatar-v {
         @extend .avatar;
         $backgroundColor: #f5a623;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-e {
+      .avatar-e, .avatar-k, .avatar-q, .avatar-w {
         @extend .avatar;
         $backgroundColor: #7ed321;
         @include avatar(40 * $onePx, $backgroundColor);
       }
-      .avatar-f {
+      .avatar-f, .avatar-l, .avatar-r, .avatar-g {
         @extend .avatar;
         $backgroundColor: #5576d7;
         @include avatar(40 * $onePx, $backgroundColor);

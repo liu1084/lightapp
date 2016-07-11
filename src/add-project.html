@@ -74,7 +74,7 @@
                         </li>
                         <li class="item">
                             <label for="projectMoney" class="name">合同金额</label>
-                            <input type="text" value="" placeholder="单位万元" name="projectMoney" id="projectMoney"/>
+                            <input type="number" value="" placeholder="单位万元" name="projectMoney" id="projectMoney"/>
                         </li>
                     </ul>
                 </form>
@@ -100,36 +100,7 @@
                     </div>
                 </div>
                 <form>
-                    <ul>
-                        <li class="item">
-                            <span class="avatar avatar-b">A</span>
-                            <span class="description">DataExchange</span>
-                            <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
-                            </span>
-                        </li>
-                        <li class="item">
-                            <span class="avatar avatar-a">D</span>
-                            <span class="description">DataExchange</span>
-                            <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
-                            </span>
-                        </li>
-                        <li class="item">
-                            <span class="avatar avatar-c">C</span>
-                            <span class="description">DataExchange</span>
-                            <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
-                            </span>
-                        </li>
-                        <li class="item">
-                            <span class="avatar avatar-f">E</span>
-                            <span class="description">DataExchange</span>
-                            <span class="number">
-                                <input value="" maxlength="10" placeholder="输入金额" type="text"/>
-                            </span>
-                        </li>
-                    </ul>
+                    <ul></ul>
                 </form>
             </div>
         </li>
@@ -142,7 +113,7 @@
                 <form>
                     <ul>
                         <li class="item">
-                            <textarea placeholder="输入相关备注信息" name="remark" id="remark" rows="8"></textarea>
+                            <textarea placeholder="输入相关备注信息" name="remark" id="remark" rows="4"></textarea>
                         </li>
                     </ul>
                 </form>
@@ -155,41 +126,41 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <ul class="products-select-modal">
+                    <ul class="select-products">
                         <li class="detail">
                             <div class="list-header">
                                 <div class="title">UniEAP</div>
-                                <div class="project-count">已选 2</div>
+                                <div class="project-count">已选 <span class="select-count"></span></div>
                             </div>
                             <div class="list-body">
                                 <ul>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                            <input type="hidden" value="platform" name="projects"/>
-                        </span>
-                                        <span class="avatar avatar-a">P</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                            <input type="hidden" value="platform" name="projects"/>
+                                        </span>
+                                        <span class="avatar avatar-p">P</span>
                                         <span class="description">Platform</span>
                                     </li>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
-                                        <span class="avatar avatar-b">W</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-w">W</span>
                                         <span class="description">Workflow</span>
                                     </li>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-checked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
-                                        <span class="avatar avatar-c">R</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-r">R</span>
                                         <span class="description">Report</span>
                                     </li>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
-                                        <span class="avatar avatar-d">U</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-u">U</span>
                                         <span class="description">UTF</span>
                                     </li>
                                 </ul>
@@ -203,33 +174,89 @@
                             <div class="list-body">
                                 <ul>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                            <input type="hidden" value="platform"/>
-                        </span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                            <input type="hidden" value="platform"/>
+                                        </span>
                                         <span class="avatar avatar-a">A</span>
                                         <span class="description">Aclome</span>
                                     </li>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
-                                        <span class="avatar avatar-b">P</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-p">P</span>
                                         <span class="description">P3</span>
                                     </li>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-checked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
-                                        <span class="avatar avatar-c">E</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-e">E</span>
                                         <span class="description">EMM</span>
                                     </li>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-m">M</span>
+                                        <span class="description">MAF</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
                                         <span class="avatar avatar-d">D</span>
                                         <span class="description">DataExchange</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">CDC</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataCompare</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataQuality</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataTransform</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataServices</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataViz</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-d">D</span>
+                                        <span class="description">DataInsight</span>
                                     </li>
                                 </ul>
                             </div>
@@ -242,10 +269,10 @@
                             <div class="list-body">
                                 <ul>
                                     <li class="item">
-                        <span class="i-checkbox i-checkbox-unchecked">
-                            <span class="icon-nextui-icon-check"></span>
-                        </span>
-                                        <span class="avatar avatar-f">A</span>
+                                        <span class="i-checkbox i-checkbox-unchecked">
+                                            <span class="icon-nextui-icon-check"></span>
+                                        </span>
+                                        <span class="avatar avatar-a">A</span>
                                         <span class="description">APM</span>
                                     </li>
                                 </ul>
@@ -253,7 +280,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="modal-footer" style="text-align: center; font-size: 12px;">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">完成</button>
                 </div>
             </div>

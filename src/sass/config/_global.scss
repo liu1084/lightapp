@@ -9,14 +9,17 @@ ul, li, ol {
   margin: 0;
 }
 
-input, select, textarea, select{
+input, select, textarea{
   border: 0;
-  height: 30 * $onePx;
-  line-height: 30 * $onePx;
   background-color: #fff;
   outline: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+
+input, select {
+  height: 30 * $onePx;
+  line-height: 30 * $onePx;
 }
 
 input[type="date"]{
@@ -39,4 +42,10 @@ select, input {
 //bootstrap dialog
 .modal-body{
   padding: 0;
+}
+
+.list-header{
+  .title{
+    font-weight: bold;
+  }
 }

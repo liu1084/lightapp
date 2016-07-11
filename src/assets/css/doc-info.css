@@ -50,14 +50,17 @@ ul, li, ol {
   margin: 0;
 }
 
-input, select, textarea, select {
+input, select, textarea {
   border: 0;
-  height: 1.875rem;
-  line-height: 1.875rem;
   background-color: #fff;
   outline: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+
+input, select {
+  height: 1.875rem;
+  line-height: 1.875rem;
 }
 
 input[type="date"] {
@@ -79,6 +82,10 @@ select, input {
 
 .modal-body {
   padding: 0;
+}
+
+.list-header .title {
+  font-weight: bold;
 }
 
 .container .base .list-header {
@@ -192,7 +199,7 @@ select, input {
   background-color: #5b8de4;
   display: inline-block;
 }
-.container .products .list-body .item .avatar, .container .products .list-body .item .avatar-a, .container .products .list-body .item .avatar-b, .container .products .list-body .item .avatar-c, .container .products .list-body .item .avatar-d, .container .products .list-body .item .avatar-e, .container .products .list-body .item .avatar-f {
+.container .products .list-body .item .avatar, .container .products .list-body .item .avatar-a, .container .products .list-body .item .avatar-g, .container .products .list-body .item .avatar-m, .container .products .list-body .item .avatar-s, .container .products .list-body .item .avatar-x, .container .products .list-body .item .avatar-b, .container .products .list-body .item .avatar-h, .container .products .list-body .item .avatar-n, .container .products .list-body .item .avatar-t, .container .products .list-body .item .avatar-y, .container .products .list-body .item .avatar-c, .container .products .list-body .item .avatar-i, .container .products .list-body .item .avatar-o, .container .products .list-body .item .avatar-u, .container .products .list-body .item .avatar-z, .container .products .list-body .item .avatar-d, .container .products .list-body .item .avatar-j, .container .products .list-body .item .avatar-p, .container .products .list-body .item .avatar-v, .container .products .list-body .item .avatar-e, .container .products .list-body .item .avatar-k, .container .products .list-body .item .avatar-q, .container .products .list-body .item .avatar-w, .container .products .list-body .item .avatar-f, .container .products .list-body .item .avatar-l, .container .products .list-body .item .avatar-r {
   display: inline-block;
   height: 2.5rem;
   width: 2.5rem;
@@ -210,7 +217,16 @@ select, input {
   background-color: #ab703b;
   display: inline-block;
 }
-.container .products .list-body .item .avatar-b {
+.container .products .list-body .item .avatar-a, .container .products .list-body .item .avatar-g, .container .products .list-body .item .avatar-m, .container .products .list-body .item .avatar-s, .container .products .list-body .item .avatar-x {
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #ab703b;
+  display: inline-block;
+}
+.container .products .list-body .item .avatar-b, .container .products .list-body .item .avatar-h, .container .products .list-body .item .avatar-n, .container .products .list-body .item .avatar-t, .container .products .list-body .item .avatar-y {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
   border-radius: 2.5rem;
@@ -219,7 +235,7 @@ select, input {
   background-color: #49c6d3;
   display: inline-block;
 }
-.container .products .list-body .item .avatar-c {
+.container .products .list-body .item .avatar-c, .container .products .list-body .item .avatar-i, .container .products .list-body .item .avatar-o, .container .products .list-body .item .avatar-u, .container .products .list-body .item .avatar-z {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
   border-radius: 2.5rem;
@@ -228,7 +244,7 @@ select, input {
   background-color: #f55b23;
   display: inline-block;
 }
-.container .products .list-body .item .avatar-d {
+.container .products .list-body .item .avatar-d, .container .products .list-body .item .avatar-j, .container .products .list-body .item .avatar-p, .container .products .list-body .item .avatar-v {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
   border-radius: 2.5rem;
@@ -237,7 +253,7 @@ select, input {
   background-color: #f5a623;
   display: inline-block;
 }
-.container .products .list-body .item .avatar-e {
+.container .products .list-body .item .avatar-e, .container .products .list-body .item .avatar-k, .container .products .list-body .item .avatar-q, .container .products .list-body .item .avatar-w {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
   border-radius: 2.5rem;
@@ -246,7 +262,7 @@ select, input {
   background-color: #7ed321;
   display: inline-block;
 }
-.container .products .list-body .item .avatar-f {
+.container .products .list-body .item .avatar-f, .container .products .list-body .item .avatar-l, .container .products .list-body .item .avatar-r, .container .products .list-body .item .avatar-g {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
   border-radius: 2.5rem;
@@ -267,7 +283,6 @@ select, input {
   float: right;
   width: 5rem;
   max-width: 80px;
-  margin-right: 15px;
 }
 .container .products .list-body .item:last-child {
   border-bottom: none;
@@ -300,9 +315,9 @@ select, input {
   width: 60px;
   background-color: #5b8de4;
   display: inline-block;
-  -moz-box-shadow: #5b8de4, 5px, 5px, 10px;
-  -webkit-box-shadow: #5b8de4, 5px, 5px, 10px;
-  box-shadow: #5b8de4, 5px, 5px, 10px;
+  -moz-box-shadow: 0 4px 8px 0 rgba(91, 141, 227, 0.5);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(91, 141, 227, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(91, 141, 227, 0.5);
   position: fixed;
   right: 0.9375rem;
   bottom: 0.9375rem;

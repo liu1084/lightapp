@@ -25,17 +25,4 @@
       @include span(last 50% no-gutter border-box);
     }
   }
-
-  .list {
-
-  }
-
-  .footer {
-
-  }
-}
-
-.container-fluid {
-  @extend .container;
-  @include full;
 }

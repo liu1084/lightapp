@@ -3,7 +3,7 @@
 @import "compass";
 @import "config/mixins";
 
-.container {
+.main {
   @include container;
 
   nav {
@@ -63,8 +63,4 @@
   .list{
     @include list(25px, 50px, #2d3646);
   }
-}
-
-.container-fluid {
-  @extend .container;
 }

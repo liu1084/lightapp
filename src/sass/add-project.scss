@@ -10,7 +10,6 @@
       height: $listHeaderHeight;
       line-height: $listHeaderHeight;
       background-color: $listHeaderBackgroundColor;
-
       .title {
         font-size: 12 * $onePx;
         color: #2d3646;
@@ -100,7 +99,8 @@
   }
   .apply-for {
     @include apply-for;
-    @include box-shadow(#5b8de4, 5px, 5px, 10px);
+    @include box-shadow(0 4px 8px 0 rgba(91, 141, 227, 0.5));
+
     position: fixed;
     right: 15 * $onePx;
     bottom: 15 * $onePx;
@@ -112,23 +112,4 @@
       left: 10px;
     }
   }
-
-  //.modal-footer{
-  //  height: 80 * $onePx;
-  //  text-align: center;
-  //  .apply-for{
-  //    @include apply-for(30px);
-  //    @include box-shadow(#5b8de4, 5px, 5px, 10px);
-  //    position: fixed;
-  //    right: 15 * $onePx;
-  //    bottom: 15 * $onePx;
-  //    font-size: 40 * $onePx;
-  //    color: #fff;
-  //    i {
-  //      position: absolute;
-  //      top: 10px;
-  //      left: 10px;
-  //    }
-  //  }
-  //}
 }
