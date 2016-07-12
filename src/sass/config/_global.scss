@@ -9,7 +9,7 @@ ul, li, ol {
   margin: 0;
 }
 
-input, select, textarea{
+input, select, textarea {
   border: 0;
   background-color: #fff;
   outline: none;
@@ -22,7 +22,7 @@ input, select {
   line-height: 30 * $onePx;
 }
 
-input[type="date"]{
+input[type="date"] {
   height: 30 * $onePx;
   line-height: 30 * $onePx;
 }
@@ -40,16 +40,16 @@ select, input {
 }
 
 //bootstrap dialog
-.modal-body{
+.modal-body {
   padding: 0;
 }
 
-.modal-footer{
+.modal-footer {
   text-align: center;
 }
 
-.list-header{
-  .title{
+.list-header {
+  .title {
     font-weight: bold;
   }
 }

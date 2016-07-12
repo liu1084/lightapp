@@ -40,13 +40,13 @@
       border-bottom: .5 * $onePx solid #cdcdd3;
       .i-checkbox {
         display: inline-block;
-        height: 16 * $onePx;
-        width: 16 * $onePx;
+        height: 18 * $onePx;
+        width: 18 * $onePx;
         margin: 0 15 * $onePx 0 0;
         position: relative;
         color: #fff;
         $backgroundColor: #ccc;
-        @include avatar(16 * $onePx, $backgroundColor);
+        @include avatar(18 * $onePx, $backgroundColor);
       }
       .i-checkbox-unchecked {
         @extend .i-checkbox;
@@ -54,7 +54,7 @@
       .i-checkbox-checked {
         @extend .i-checkbox;
         $backgroundColor: #5b8de4;
-        @include avatar(16px, $backgroundColor);
+        @include avatar(18 * $onePx, $backgroundColor);
       }
 
       .avatar {
@@ -156,13 +156,13 @@
       border-bottom: .5 * $onePx solid #cdcdd3;
       .i-checkbox {
         display: inline-block;
-        height: 16 * $onePx;
-        width: 16 * $onePx;
+        height: 18 * $onePx;
+        width: 18 * $onePx;
         margin: 0 15 * $onePx 0 0;
         position: relative;
         color: #fff;
         $backgroundColor: #ccc;
-        @include avatar(16 * $onePx, $backgroundColor);
+        @include avatar(18 * $onePx, $backgroundColor);
       }
       .i-checkbox-unchecked {
         @extend .i-checkbox;
@@ -170,7 +170,7 @@
       .i-checkbox-checked {
         @extend .i-checkbox;
         $backgroundColor: #5b8de4;
-        @include avatar(16px, $backgroundColor);
+        @include avatar(18 * $onePx, $backgroundColor);
       }
 
       .avatar {
@@ -225,7 +225,10 @@
         vertical-align: top;
       }
     }
+
     .item:last-child{
+      margin-bottom: 0;
+      padding: 0 0 0 15 * $onePx;
       border-bottom: none;
     }
   }
@@ -233,4 +236,17 @@
 
 @mixin apply-for($radius: 60 * $onePx){
   @include avatar(60px, #5b8de4);
+}
+
+@mixin toast($backgroundColor: #000, $width: 200 * $onePx, $height: 140 * $onePx){
+  @include border-radius(5 * $onePx);
+  width: $width;
+  height: $height;
+  opacity: .6;
+  background-color: $backgroundColor;
+  position: absolute;
+  z-index: 2048;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

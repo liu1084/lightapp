@@ -3,12 +3,12 @@
  */
 $(function () {
     toastr.options = {
-        closeMethod: 'fadeOut',
+        closeMethod: '',
         closeDuration: '200',
-        closeEasing: 'swing',
+        closeEasing: '',
         preventDuplicates: true,
         positionClass: 'toast-top-full-width',
-        hideDuration: 500
+        hideDuration: 500000
     };
 
     var neu = new Neu();
@@ -42,7 +42,7 @@ Neu.prototype = {
 
             _this.countSelected();
         });
-        $('.icon-nextui-icon-add').on('click', function () {
+        $('.icon-nextui-add').on('click', function () {
             //window.location.href = "add-project-detail.html";
             _this.getProducts();
             $('#myModal')
@@ -61,7 +61,7 @@ Neu.prototype = {
                 });
         });
 
-        $('.icon-nextui-icon-delete').on('click', function () {
+        $('.icon-nextui-delete').on('click', function () {
             var form = $('.products form');
             if ($(this).attr('show-select') === "true"){
                 form.find('.item').find('.avatar').prev('span').remove();
@@ -69,7 +69,7 @@ Neu.prototype = {
                 return false;
             }
             var html = '<span class="i-checkbox i-checkbox-unchecked">' +
-                '<span class="icon-nextui-icon-check"></span>' +
+                '<span class="icon-nextui-check"></span>' +
                 '</span>';
             $(this).attr('show-select', true);
 
@@ -91,11 +91,31 @@ Neu.prototype = {
                 $(line).parent('.item').remove();
             });
         });
+        //
+        //$(document).on('change', '.products .item .number input[type="number"]', function(){
+        //    _this.updateProductMoney();
+        //});
+    },
+    showToast: function(type, logo, message){
+        //toast
+        var toast = $('#toast');
+        var source = toast.html();
+        var template = Handlebars.compile(source);
+        var context = {type: type, logo: logo, message: message};
+        var html = template(context);
 
+        var body = $('body');
+        body.children('.toast').remove();
+        body.append(html);
+        toast.show();
+        setTimeout(function(){
+            $('.toast').hide();
+        }, 2000);
     },
     save: function () {
         var _this = this;
         $(".apply-for").click(function () {
+            _this.updateProductMoney();
             var id = $("#id").val();
             var name = $("#name").val();
             var custName = $("#custName").val();
@@ -104,27 +124,34 @@ Neu.prototype = {
             var projectMoney = $("#projectMoney").val();
             var product = {products: _this.selectedProducts};
             var remark = $("#remark").html();
+
+
+
             if (name == null || name == "") {
-                toastr.warning('', '项目名不能为空');
+                //toastr.warning('', '项目名不能为空');
+                //_this.showToast('toast-success', 'icon-nextui-check-circle', '项目名不能为空');
+                //_this.showToast('toast-warning', 'icon-nextui-report-problem', '客户名不能为空');
+                _this.showToast('toast-info', 'icon-nextui-error-outline', '客户名不能为空');
                 return false;
             }
             if (custName == null || custName == "") {
-                toastr.warning('', '客户名不能为空');
+                _this.showToast('toast-warning', 'icon-nextui-report-problem', '客户名不能为空');
+                //toastr.warning('', '客户名不能为空');
                 return false;
             }
             $.ajax({
                 type: 'POST',
                 async: false,
                 dataType: 'json',
-                data: {"id": id, "name": name, "custName": custName, "status": status, "signDate": signDate, "projectMoney": projectMoney, "product": product, "remark": remark},
+                data: {"id": id, "name": name, "custName": custName, "status": status, "signDate": signDate, "projectMoney": projectMoney, "product": JSON.stringify(product), "remark": remark},
                 url: contextPath + "/workflow/saveSaleProject.action",
                 success: function (data) {
                     $("#id").val(data.id);
                     //window.location.href = "myproject.html";
-                    toastr.success('保存成功!');
+                    _this.showToast('toast-success', 'icon-nextui-check', '保存成功');
                 },
                 error: function (data) {
-                    toastr.warning('保存失败!', data.statusText);
+                    _this.showToast('toast-warning', 'icon-nextui-report-problem', '保存失败');
                 }
             });
         });
@@ -149,7 +176,7 @@ Neu.prototype = {
             html +='    <span class="avatar avatar-' + letter.toLowerCase() + '">' + letter + '</span>';
             html +='    <span class="description">' + p.name + '</span>';
             html +='    <span class="number">';
-            html +='        <input value="' + p.money + '" maxlength="10" placeholder="输入金额" type="text"/>';
+            html +='        <input value="' + p.money + '" maxlength="10" placeholder="输入金额" type="number"/>';
             html +='    </span>';
             html +='</li>';
         });
@@ -161,12 +188,24 @@ Neu.prototype = {
         var selectedProducts = [];
         var products = $('.select-products .item .i-checkbox-checked');
         $.each(products, function(i, p){
-            var thiz = this;
-            var productName = $(thiz).siblings('.description').text();
+            var productName = $(this).siblings('.description').text();
             var productMoney = $(this).siblings('.number').children('input').val() ? $(this).siblings('.number').children('input').val() : 0;
             selectedProducts.push({name: productName, money: productMoney.toNumber()});
         });
         return selectedProducts;
+    },
+
+    updateProductMoney: function(){
+        var _this = this;
+        var products = $('.products .item .description');
+        var tmp = [];
+        $.each(products, function(i, p){
+            var name = $(this).text();
+            var number = $(this).next('span.number').children('input').val();
+            tmp.push({name: name, money: number});
+        });
+
+        _this.selectedProducts = tmp;
     },
     selectedProductsOnModal: function(){
         var _this = this;

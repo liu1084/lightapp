@@ -1,28 +1,34 @@
+/* line 21, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* line 4, ../../sass/layouts/_add-project-layout.scss */
 .main {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+/* line 12, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .main:after {
   content: " ";
   display: block;
   clear: both;
 }
+/* line 8, ../../sass/layouts/_add-project-layout.scss */
 .main .products .operate .add-sub {
   width: 50%;
   float: left;
 }
+/* line 12, ../../sass/layouts/_add-project-layout.scss */
 .main .products .operate .del {
   width: 50%;
   float: right;
   margin-right: 0;
 }
+/* line 20, ../../sass/layouts/_add-project-layout.scss */
 .main .detail .list-header .title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -30,6 +36,7 @@
   width: 50%;
   float: left;
 }
+/* line 24, ../../sass/layouts/_add-project-layout.scss */
 .main .detail .list-header .project-count {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -39,17 +46,20 @@
   margin-right: 0;
 }
 
+/* line 1, ../../sass/config/_global.scss */
 body {
   font-family: "Microsoft YaHei", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
+/* line 6, ../../sass/config/_global.scss */
 ul, li, ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* line 12, ../../sass/config/_global.scss */
 input, select, textarea {
   border: 0;
   background-color: #fff;
@@ -58,16 +68,19 @@ input, select, textarea {
   -webkit-border-radius: 0;
 }
 
+/* line 20, ../../sass/config/_global.scss */
 input, select {
   height: 1.875rem;
   line-height: 1.875rem;
 }
 
+/* line 25, ../../sass/config/_global.scss */
 input[type="date"] {
   height: 1.875rem;
   line-height: 1.875rem;
 }
 
+/* line 30, ../../sass/config/_global.scss */
 .footer {
   height: 9.375rem;
   line-height: 9.375rem;
@@ -75,38 +88,46 @@ input[type="date"] {
   background-color: #f2f2f4;
 }
 
+/* line 37, ../../sass/config/_global.scss */
 select, input {
   width: 13.125rem;
   max-width: 13.125rem;
 }
 
+/* line 43, ../../sass/config/_global.scss */
 .modal-body {
   padding: 0;
 }
 
+/* line 47, ../../sass/config/_global.scss */
 .modal-footer {
   text-align: center;
 }
 
+/* line 52, ../../sass/config/_global.scss */
 .list-header .title {
   font-weight: bold;
 }
 
+/* line 8, ../../sass/info-apply-detail.scss */
 .main .base .list-header {
   padding: 0 0.9375rem;
   height: 1.5625rem;
   line-height: 1.5625rem;
   background-color: #f2f2f4;
 }
+/* line 14, ../../sass/info-apply-detail.scss */
 .main .base .list-header .title {
   font-size: 0.75rem;
   color: #2d3646;
 }
+/* line 19, ../../sass/info-apply-detail.scss */
 .main .base .list-body {
   padding: 0 0 0 0.9375rem;
   font-size: 0.875rem;
   box-sizing: border-box;
 }
+/* line 23, ../../sass/info-apply-detail.scss */
 .main .base .list-body .item {
   height: 2.8125rem;
   line-height: 2.8125rem;
@@ -114,64 +135,78 @@ select, input {
   box-sizing: border-box;
   position: relative;
 }
+/* line 29, ../../sass/info-apply-detail.scss */
 .main .base .list-body .item .name {
   font-size: 0.875rem;
   color: #4a4a4a;
   margin-right: 0.9375rem;
 }
+/* line 35, ../../sass/info-apply-detail.scss */
 .main .base .list-body .item:last-child {
   border-bottom: none;
 }
+/* line 41, ../../sass/info-apply-detail.scss */
 .main .products {
   font-size: 0.75rem;
   overflow: hidden;
 }
+/* line 42, ../../sass/info-apply-detail.scss */
 .main .products .operate {
   padding: 0 0.9375rem;
   height: 3.4375rem;
   line-height: 3.125rem;
   border-bottom: 0.03125rem solid #cdcdd3;
 }
+/* line 47, ../../sass/info-apply-detail.scss */
 .main .products .operate .add-sub {
   position: relative;
   color: #999999;
   font-size: 1.875rem;
 }
+/* line 52, ../../sass/info-apply-detail.scss */
 .main .products .operate .add-sub .add {
   position: absolute;
   left: 0;
   top: 0.625rem;
 }
+/* line 58, ../../sass/info-apply-detail.scss */
 .main .products .operate .add-sub .sub {
   position: absolute;
   left: 2.5rem;
   top: 0.625rem;
 }
+/* line 65, ../../sass/info-apply-detail.scss */
 .main .products .operate .del {
   text-align: right;
   color: #f55b23;
 }
+/* line 68, ../../sass/info-apply-detail.scss */
 .main .products .operate .del span {
   cursor: pointer;
 }
+/* line 14, ../../sass/config/_mixins.scss */
 .main .products .list-header {
   height: 1.5625rem;
   line-height: 1.5625rem;
   background-color: #f2f2f4;
   padding: 0 0.9375rem;
 }
+/* line 20, ../../sass/config/_mixins.scss */
 .main .products .list-header .title {
   font-size: 0.75rem;
   color: #000;
 }
+/* line 25, ../../sass/config/_mixins.scss */
 .main .products .list-header .project-count {
   text-align: right;
   color: #5b8de4;
 }
+/* line 31, ../../sass/config/_mixins.scss */
 .main .products .list-body {
   font-size: 0.875rem;
   padding: 0.3125rem 0;
 }
+/* line 35, ../../sass/config/_mixins.scss */
 .main .products .list-body .item {
   box-sizing: content-box;
   height: 2.5rem;
@@ -179,30 +214,33 @@ select, input {
   padding: 0.3125rem 0.9375rem 0.3125rem 0.9375rem;
   border-bottom: 0.03125rem solid #cdcdd3;
 }
+/* line 41, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .i-checkbox, .main .products .list-body .item .i-checkbox-unchecked, .main .products .list-body .item .i-checkbox-checked {
   display: inline-block;
-  height: 1rem;
-  width: 1rem;
+  height: 1.125rem;
+  width: 1.125rem;
   margin: 0 0.9375rem 0 0;
   position: relative;
   color: #fff;
-  -moz-border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  border-radius: 1rem;
-  height: 1rem;
-  width: 1rem;
+  -moz-border-radius: 1.125rem;
+  -webkit-border-radius: 1.125rem;
+  border-radius: 1.125rem;
+  height: 1.125rem;
+  width: 1.125rem;
   background-color: #ccc;
   display: inline-block;
 }
+/* line 54, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .i-checkbox-checked {
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px;
-  border-radius: 16px;
-  height: 16px;
-  width: 16px;
+  -moz-border-radius: 1.125rem;
+  -webkit-border-radius: 1.125rem;
+  border-radius: 1.125rem;
+  height: 1.125rem;
+  width: 1.125rem;
   background-color: #5b8de4;
   display: inline-block;
 }
+/* line 60, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar, .main .products .list-body .item .avatar-a, .main .products .list-body .item .avatar-g, .main .products .list-body .item .avatar-m, .main .products .list-body .item .avatar-s, .main .products .list-body .item .avatar-x, .main .products .list-body .item .avatar-b, .main .products .list-body .item .avatar-h, .main .products .list-body .item .avatar-n, .main .products .list-body .item .avatar-t, .main .products .list-body .item .avatar-y, .main .products .list-body .item .avatar-c, .main .products .list-body .item .avatar-i, .main .products .list-body .item .avatar-o, .main .products .list-body .item .avatar-u, .main .products .list-body .item .avatar-z, .main .products .list-body .item .avatar-d, .main .products .list-body .item .avatar-j, .main .products .list-body .item .avatar-p, .main .products .list-body .item .avatar-v, .main .products .list-body .item .avatar-e, .main .products .list-body .item .avatar-k, .main .products .list-body .item .avatar-q, .main .products .list-body .item .avatar-w, .main .products .list-body .item .avatar-f, .main .products .list-body .item .avatar-l, .main .products .list-body .item .avatar-r {
   display: inline-block;
   height: 2.5rem;
@@ -212,6 +250,7 @@ select, input {
   font-size: 1.125rem;
   color: #fff;
 }
+/* line 69, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-a {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -221,6 +260,7 @@ select, input {
   background-color: #ab703b;
   display: inline-block;
 }
+/* line 74, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-a, .main .products .list-body .item .avatar-g, .main .products .list-body .item .avatar-m, .main .products .list-body .item .avatar-s, .main .products .list-body .item .avatar-x {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -230,6 +270,7 @@ select, input {
   background-color: #ab703b;
   display: inline-block;
 }
+/* line 79, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-b, .main .products .list-body .item .avatar-h, .main .products .list-body .item .avatar-n, .main .products .list-body .item .avatar-t, .main .products .list-body .item .avatar-y {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -239,6 +280,7 @@ select, input {
   background-color: #49c6d3;
   display: inline-block;
 }
+/* line 84, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-c, .main .products .list-body .item .avatar-i, .main .products .list-body .item .avatar-o, .main .products .list-body .item .avatar-u, .main .products .list-body .item .avatar-z {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -248,6 +290,7 @@ select, input {
   background-color: #f55b23;
   display: inline-block;
 }
+/* line 89, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-d, .main .products .list-body .item .avatar-j, .main .products .list-body .item .avatar-p, .main .products .list-body .item .avatar-v {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -257,6 +300,7 @@ select, input {
   background-color: #f5a623;
   display: inline-block;
 }
+/* line 94, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-e, .main .products .list-body .item .avatar-k, .main .products .list-body .item .avatar-q, .main .products .list-body .item .avatar-w {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -266,6 +310,7 @@ select, input {
   background-color: #7ed321;
   display: inline-block;
 }
+/* line 99, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .avatar-f, .main .products .list-body .item .avatar-l, .main .products .list-body .item .avatar-r, .main .products .list-body .item .avatar-g {
   -moz-border-radius: 2.5rem;
   -webkit-border-radius: 2.5rem;
@@ -275,42 +320,52 @@ select, input {
   background-color: #5576d7;
   display: inline-block;
 }
+/* line 105, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .description {
   display: inline-block;
   padding: 0 0 0 0.625rem;
 }
+/* line 110, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .description:last-child {
   border-bottom: none;
   vertical-align: top;
 }
+/* line 115, ../../sass/config/_mixins.scss */
 .main .products .list-body .item .number {
   float: right;
   width: 5rem;
   max-width: 80px;
 }
+/* line 121, ../../sass/config/_mixins.scss */
 .main .products .list-body .item:last-child {
   border-bottom: none;
 }
+/* line 78, ../../sass/info-apply-detail.scss */
 .main .description .list-header {
   padding: 0 0.9375rem;
   height: 1.5625rem;
   line-height: 1.5625rem;
   background-color: #f2f2f4;
 }
+/* line 84, ../../sass/info-apply-detail.scss */
 .main .description .list-header .title {
   font-size: 0.75rem;
   color: #2d3646;
 }
+/* line 89, ../../sass/info-apply-detail.scss */
 .main .description .list-body {
   padding: 0 0.9375rem;
   height: 9.0625rem;
 }
+/* line 92, ../../sass/info-apply-detail.scss */
 .main .description .list-body .item {
   padding: 1rem 0;
 }
+/* line 94, ../../sass/info-apply-detail.scss */
 .main .description .list-body .item textarea {
   width: 100%;
 }
+/* line 100, ../../sass/info-apply-detail.scss */
 .main .apply-for {
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -328,6 +383,7 @@ select, input {
   font-size: 2.5rem;
   color: #fff;
 }
+/* line 108, ../../sass/info-apply-detail.scss */
 .main .apply-for i {
   position: absolute;
   top: 10px;

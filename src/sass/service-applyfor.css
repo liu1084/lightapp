@@ -1,20 +1,20 @@
 /*
 Error: File to import not found or unreadable: susy.
         on line 1 of config/_grids.scss
-        from line 1 of layouts/_info-applyfor.scss
-        from line 1 of info-applyfor.scss
+        from line 1 of layouts/_add-project-layout.scss
+        from line 1 of service-applyfor.scss
 
-1: @import "layouts/info-applyfor";
+1: @import "layouts/add-project-layout";
 2: @import "config/global";
 3: @import "compass";
 4: @import "config/mixins";
 5: 
-6: .main {
+6: .container {
 
 Backtrace:
 config/_grids.scss:1
-layouts/_info-applyfor.scss:1
-info-applyfor.scss:1
+layouts/_add-project-layout.scss:1
+service-applyfor.scss:1
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -83,4 +83,4 @@ D:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: susy.\A         on line 1 of config/_grids.scss\A         from line 1 of layouts/_info-applyfor.scss\A         from line 1 of info-applyfor.scss\A \A 1: @import \"layouts/info-applyfor\";\A 2: @import \"config/global\";\A 3: @import \"compass\";\A 4: @import \"config/mixins\";\A 5: \A 6: .main {"; }
+  content: "Error: File to import not found or unreadable: susy.\A         on line 1 of config/_grids.scss\A         from line 1 of layouts/_add-project-layout.scss\A         from line 1 of service-applyfor.scss\A \A 1: @import \"layouts/add-project-layout\";\A 2: @import \"config/global\";\A 3: @import \"compass\";\A 4: @import \"config/mixins\";\A 5: \A 6: .container {"; }

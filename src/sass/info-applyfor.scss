@@ -8,6 +8,7 @@
 
   nav {
     height: $headerHeight-50;
+    font-weight: bold;
     div{
       height: $headerHeight-50;
       line-height: $headerHeight-50;
@@ -15,6 +16,7 @@
       background-color: #f9f9f9;
       font-size: 14 * $onePx;
       cursor: pointer;
+      color: #999999;
     }
     div.nav-active {
       color: #5b8de4;
@@ -46,15 +48,23 @@
         text-align: right;
         display: inline-block;
       }
+
       span:nth-child(2n+1){
-        color: #5b8de4;
-        position: absolute;
-        right: 36 * $onePx;
+        margin-right: 8 * $onePx;
+        color: #fff;
+        background-color: #5b8de4;
+        @include border-radius(5 * $onePx);
+        padding: 0 8 * $onePx;
+        font-size: 14 * $onePx;
+        font-weight: bold;
+        line-height: 25 * $onePx;
+        height: 25 * $onePx;
       }
+
       span:nth-child(2n+2){
         color: #cdcdd3;
         position: absolute;
-        right: 20 * $onePx;
+        right: 16 * $onePx;
       }
     }
   }

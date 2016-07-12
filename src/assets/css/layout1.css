@@ -1,62 +1,77 @@
+/* line 39, ../../sass/layout1.scss */
 header {
   height: 10rem;
   background: #2F94B2;
   margin-bottom: 1em;
 }
 
+/* line 45, ../../sass/layout1.scss */
 body {
   font-family: "Microsoft YaHei", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
+/* line 50, ../../sass/layout1.scss */
 .hero {
   height: 10rem;
   margin-bottom: 1em;
 }
+/* line 53, ../../sass/layout1.scss */
 .hero h3, .hero h2 {
   margin: 1em;
 }
+/* line 56, ../../sass/layout1.scss */
 .hero .one {
   background: #FF739C;
   height: 100%;
 }
+/* line 60, ../../sass/layout1.scss */
 .hero .two {
   height: 100%;
 }
+/* line 62, ../../sass/layout1.scss */
 .hero .two div {
   height: 100%;
   background: #CCC136;
 }
 
+/* line 70, ../../sass/layout1.scss */
 .content h3 {
   margin: 10px;
 }
+/* line 73, ../../sass/layout1.scss */
 .content div {
   height: 100px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+/* line 78, ../../sass/layout1.scss */
 .content div:nth-child(3n) {
   background: #2F94B2;
 }
+/* line 81, ../../sass/layout1.scss */
 .content div:nth-child(3n+1) {
   background: #FF7311;
 }
+/* line 84, ../../sass/layout1.scss */
 .content div:nth-child(3n+2) {
   background: #5DD9FF;
 }
 
+/* line 91, ../../sass/layout1.scss */
 .page {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+/* line 12, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .page:after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* line 95, ../../sass/layout1.scss */
 header {
   clear: both;
   width: 100%;
@@ -65,10 +80,12 @@ header {
   margin-right: 0;
 }
 
+/* line 99, ../../sass/layout1.scss */
 .hero {
   clear: both;
 }
 @media (max-width: 768px) {
+  /* line 101, ../../sass/layout1.scss */
   .hero .one {
     clear: both;
     width: 100%;
@@ -79,6 +96,7 @@ header {
   }
 }
 @media (min-width: 768px) {
+  /* line 101, ../../sass/layout1.scss */
   .hero .one {
     width: 32.20339%;
     float: left;
@@ -86,6 +104,7 @@ header {
   }
 }
 @media (max-width: 768px) {
+  /* line 111, ../../sass/layout1.scss */
   .hero .two {
     clear: both;
     width: 100%;
@@ -95,53 +114,63 @@ header {
   }
 }
 @media (min-width: 768px) {
+  /* line 111, ../../sass/layout1.scss */
   .hero .two {
     width: 66.10169%;
     float: right;
     margin-right: 0;
   }
 }
+/* line 120, ../../sass/layout1.scss */
 .hero .two div:nth-child(4n+1) {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
 }
+/* line 124, ../../sass/layout1.scss */
 .hero .two div:nth-child(4n+2) {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
 }
+/* line 127, ../../sass/layout1.scss */
 .hero .two div:nth-child(4n+3) {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
 }
+/* line 130, ../../sass/layout1.scss */
 .hero .two div:nth-child(4n) {
   width: 23.07692%;
   float: right;
   margin-right: 0;
 }
+/* line 133, ../../sass/layout1.scss */
 .hero .two div:nth-child(4) {
   width: 23.07692%;
   float: right;
   margin-right: 0;
 }
 
+/* line 140, ../../sass/layout1.scss */
 .content div {
   width: 32.20339%;
   float: left;
 }
+/* line 66, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_gallery.scss */
 .content div:nth-child(3n + 1) {
   margin-left: 0;
   margin-right: -100%;
   clear: both;
   margin-left: 0;
 }
+/* line 66, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_gallery.scss */
 .content div:nth-child(3n + 2) {
   margin-left: 33.89831%;
   margin-right: -100%;
   clear: none;
 }
+/* line 66, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_gallery.scss */
 .content div:nth-child(3n + 3) {
   margin-left: 67.79661%;
   margin-right: -100%;

@@ -1,0 +1,168 @@
+@import "layouts/info-aptitude";
+@import "config/global";
+@import "compass";
+@import "config/mixins";
+
+.main {
+  @include container;
+
+  nav {
+    height: $headerHeight-50;
+    font-weight: bold;
+    div{
+      height: $headerHeight-50;
+      line-height: $headerHeight-50;
+      text-align: center;
+      background-color: #f9f9f9;
+      font-size: 14 * $onePx;
+      cursor: pointer;
+      color: #999999;
+    }
+    div.nav-active {
+      color: #5b8de4;
+      border-bottom-color: #5b8de4;
+      border-bottom-width: 6 * $onePx;
+      border-bottom-style: solid;
+    }
+  }
+
+  .all-doc{
+    height: $allDocHeight;
+    background-color: #ffffff;
+    div{
+      height: $allDocHeight;
+      line-height: $allDocHeight;
+      padding: 0 30 * $onePx;
+      font-size: 14 * $onePx;
+    }
+
+    div:nth-child(2n+1){
+      text-align: left;
+    }
+
+    div:nth-child(2n+2){
+      text-align: right;
+      position: relative;
+      span{
+        line-height: 36 * $onePx;
+        text-align: right;
+        display: inline-block;
+      }
+      span:nth-child(2n+1){
+        margin-right: 8 * $onePx;
+        color: #fff;
+        background-color: #5b8de4;
+        @include border-radius(5 * $onePx);
+        padding: 0 15 * $onePx;
+        font-size: 14 * $onePx;
+        font-weight: bold;
+      }
+      span:nth-child(2n+2){
+        color: #cdcdd3;
+        position: absolute;
+        right: 20 * $onePx;
+      }
+    }
+  }
+
+
+  .aptitude-list{
+    padding: 15 * $onePx;
+
+    .item{
+      height: 125 * $onePx;
+      line-height: 125 * $onePx;
+      display: block;
+      margin-bottom: 15 * $onePx;
+      @include border-radius(10 * $onePx);
+      @include box-shadow(0 1px 8px 0 rgba(57, 91, 149, 0.2));
+
+      .list-header{
+        padding: 17.5 * $onePx;
+        height: 75 * $onePx;
+        line-height: 75 * $onePx;
+        position: relative;
+        color: #fff;
+        @include border-radius(10 * $onePx 10 * $onePx 0 0);
+        .logo{
+          height: 40 * $onePx;
+          i{
+            font-size: 40px;
+            top: 22 * $onePx;
+            left: 18 * $onePx;
+          }
+        }
+
+        .number{
+          height: 40 * $onePx;
+          font-weight: bold;
+          div{
+            position: absolute;
+            height: 20 * $onePx;
+            display: inline-block;
+            right: 18 * $onePx;
+          }
+
+          div:nth-child(2n+1){
+            top: -10 * $onePx;
+            font-size: 24px;
+          }
+
+          div:nth-child(2n+2){
+            top: 15 * $onePx;
+          }
+
+        }
+      }
+
+      .list-body{
+        padding: 8 * $onePx 20 * $onePx;
+        height: 50 * $onePx;
+        line-height: 50 * $onePx;
+
+        .title{
+          color: #4a4a4a;
+          @include span(50% no-gutter);
+          height: 35 * $onePx;
+          line-height: 35 * $onePx;
+        }
+
+        .view{
+          position: relative;
+          i{
+            font-size: 30px;
+            color: #cdcdd3;
+            text-align: right;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    .item-product-level{
+      @extend .item;
+      .list-header{
+        $backgroundColor: #fd702f;
+        background-color: $backgroundColor;
+      }
+    }
+    .item-company-level{
+      @extend .item;
+      .list-header{
+        $backgroundColor: #2acc84;
+        background-color: $backgroundColor;
+      }
+    }
+    .item-other-level{
+      @extend .item;
+      .list-header{
+        $backgroundColor: #845ddd;
+        background-color: $backgroundColor;
+      }
+    }
+
+    .item:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

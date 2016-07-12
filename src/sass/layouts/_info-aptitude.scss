@@ -1,0 +1,51 @@
+@import "../config/grids";
+@import "../variables";
+
+.main {
+  @include container;
+  nav {
+    div {
+      @include span(33.3333% no-gutter border-box);
+    }
+  }
+
+  .title{
+    @include span(50% no-gutter border-box)
+  }
+
+  .project-count{
+    @include span(50% no-gutter border-box)
+  }
+
+  .all-doc {
+    div:nth-child(2n+1) {
+      @include span(50% no-gutter border-box);
+    }
+    div:nth-child(2n+2) {
+      @include span(last 50% no-gutter border-box);
+    }
+  }
+
+
+  .aptitude-list{
+    .item{
+      .list-header{
+        .logo{
+          @include span(50% no-gutter);
+        }
+        .number{
+          @include span(last 50% no-gutter);
+        }
+      }
+
+      .list-body{
+        .title{
+          @include span(50% no-gutter);
+        }
+        .view{
+          @include span(last 50% no-gutter);
+        }
+      }
+    }
+  }
+}

@@ -1,38 +1,24 @@
 /*
-Error: File to import not found or unreadable: susy.
-        on line 1 of config/_grids.scss
-        from line 1 of layouts/_info-applyfor.scss
-        from line 1 of info-applyfor.scss
+Error: File to import not found or unreadable: compass.
+        on line 2 of config/_mixins.scss
+        from line 1 of toast.scss
 
-1: @import "layouts/info-applyfor";
-2: @import "config/global";
-3: @import "compass";
-4: @import "config/mixins";
-5: 
-6: .main {
+1: @import "config/mixins";
+2: 
+3: .toast {
+4:   @include toast;
+5:   text-align: center;
+6:   padding: 40 * $onePx 0;
+7:   border: 2px solid #CCC;
 
 Backtrace:
-config/_grids.scss:1
-layouts/_info-applyfor.scss:1
-info-applyfor.scss:1
+config/_mixins.scss:2
+toast.scss:1
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 D:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -83,4 +69,4 @@ D:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: susy.\A         on line 1 of config/_grids.scss\A         from line 1 of layouts/_info-applyfor.scss\A         from line 1 of info-applyfor.scss\A \A 1: @import \"layouts/info-applyfor\";\A 2: @import \"config/global\";\A 3: @import \"compass\";\A 4: @import \"config/mixins\";\A 5: \A 6: .main {"; }
+  content: "Error: File to import not found or unreadable: compass.\A         on line 2 of config/_mixins.scss\A         from line 1 of toast.scss\A \A 1: @import \"config/mixins\";\A 2: \A 3: .toast {\A 4:   @include toast;\A 5:   text-align: center;\A 6:   padding: 40 * $onePx 0;\A 7:   border: 2px solid #CCC;"; }
